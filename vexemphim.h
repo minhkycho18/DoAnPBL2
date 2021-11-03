@@ -1,0 +1,30 @@
+#include "phim.h"
+#include <string>
+#include <fstream>
+#include <iostream>
+using namespace std;
+
+class vexemphim
+{
+private:  
+    phim tenphim;
+    string SoGhe;
+    int giatien;
+public:
+    vexemphim();
+    ~vexemphim();
+    // ----------------Cụm hàm get set------------------------
+    void setSoghe(string&);
+    void setgiave(int&);
+    string getSoghe();
+    int getgiave();
+    //-----------------Nhập và suất----------------------------
+    void input(phim&);
+    void output();
+    //-----------------Các phương thức đọc và ghi file---------
+    void doc(ifstream&);
+    void ghi(ofstream&);
+    
+};
+
+

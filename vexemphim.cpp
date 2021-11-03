@@ -1,0 +1,55 @@
+#include "vexemphim.h"
+#include <fstream>
+vexemphim::vexemphim(){
+
+}
+vexemphim::~vexemphim(){
+    
+}
+// -----------------------------------------------------------------
+void vexemphim::setSoghe(string& s){
+    this->SoGhe = s;
+}
+void vexemphim::setgiave(int& gt){
+    this->giatien = gt;
+}
+string vexemphim::getSoghe(){
+    return this->SoGhe;
+}
+int vexemphim::getgiave(){
+    return this->giatien;
+}
+
+// -----------------------------------------------------------------
+
+void vexemphim::doc(ifstream& in){
+    string sg;
+    int gia;
+    fflush(stdin);
+    getline(in,sg);
+    in >> gia;
+    this->tenphim.doc(in);
+    this->setSoghe(sg);
+    this->setgiave(gia);
+}
+void vexemphim::ghi(ofstream& o){
+    o << getSoghe() << endl;
+    this->tenphim.ghi(o);
+    o << getgiave() << endl;
+}
+
+// -----------------------------------------------------------------
+
+void vexemphim::input(phim& p){
+    cin.ignore();
+    this->tenphim = p;
+    cout << "Nhap so ghe" ; fflush(stdin); getline(cin,this->SoGhe);
+    cout << "Nhap Gia Ve: "; cin >> this->giatien;
+}
+void vexemphim::output(){
+    cout << "So ghe: " << this->SoGhe << endl;
+    this->tenphim.output();
+    cout << "GiaVe: " << this->giatien << endl;
+}
+
+
