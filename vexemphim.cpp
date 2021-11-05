@@ -29,6 +29,8 @@ void vexemphim::doc(ifstream& in){
     getline(in,sg);
     in >> gia;
     this->tenphim.doc(in);
+    char ss[5];
+	in.getline( ss, 3 ); 
     this->setSoghe(sg);
     this->setgiave(gia);
 }

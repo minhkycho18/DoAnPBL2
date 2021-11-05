@@ -8,6 +8,13 @@ void ThemPhim(phim ds_phim[], int &m){
     ds_phim[m] = p;           // Hàm để thêm phim vào cuối mảng
     m++;
 }
+void Xem_DS_phim(phim ds_phim[],int& m){
+    for (int i=0;i< m; i++){
+        cout << i << "." << endl;
+        ds_phim[i].output();
+        cout << endl;
+    }
+}
 void Cap_Nhat_Du_Lieu(phim ds_phim[], int& m){
     ifstream tsp,dsp;
     tsp.open("tongsophim.txt",ios::in);
@@ -37,7 +44,7 @@ void Menu(khachhang ds_kh[],int n,phim ds_phim[], int m){
                 cout << "\n\n\t\t ====== Bang Hien Thi Quan ly ======";
                 cout << "\n\t1. Them Phim Vao Danh Sach Phim ";	
                 cout << "\n\t2. Xoa Phim Trong Danh Sach Phim ";	
-                cout << "\n\t3. Sua Phim Trong Danh Sach Phim ";	
+                cout << "\n\t3. Khoi Tao Toan Bo Danh Sach Phim ";	
 		        cout << "\n\t4. Xem Danh Sach Phim Hien Tai";
                 cout << "\n\t5. Xem Doanh Thu Tong ";
                 cout << "\n\t6. Danh Sach Khach Hang Da Mua Ve";
@@ -78,6 +85,47 @@ void Menu(khachhang ds_kh[],int n,phim ds_phim[], int m){
                 } 
                 if(luachonQL == 2){
 
+                }
+                if(luachonQL == 3){
+                    int chon;
+                    ofstream clr;
+                    clr.open("dsphim.txt",ios::out);
+                    clr.close();
+                    m=0;
+			        while (true)
+			        {
+				        system("cls");
+				        cout << "\n1. Nhap phim:";
+				        cout << "\n0. Ket thuc:";
+				        cout << endl;
+				        cout << "\nNhap lua chon: ";
+				        cin >> chon;
+
+				        if (chon == 1)
+				        {
+				        	cout << "\n Nhap Thong Tin Ve Phim: \n";
+        			        ThemPhim(ds_phim,m);
+                            ofstream dsp,tsp;
+                            dsp.open("dsphim.txt",ios::app);
+                            tsp.open("tongsophim.txt",ios::out);
+                            ds_phim[m-1].ghi(dsp);
+                            tsp << m;
+                            dsp.close();
+                            tsp.close();
+				        }				
+				        else
+				        {				
+					        break;
+				        }
+                    }
+                }    
+                if(luachonQL == 4){
+                    system("cls");
+                    Xem_DS_phim(ds_phim,m);
+                    system("pause");
+                }
+                if(luachonQL == 5){
+                    
                 }
                 else{
                     break;

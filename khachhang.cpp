@@ -49,6 +49,8 @@ void khachhang::doc(ifstream& in){
         this->ve[i].doc(in);
     }
     in >> tongt;
+    char ss[5];
+	in.getline( ss, 3 ); 
     this->setHoten(ht);
     this->setTuoi(t);
     this->setsoluong(sl);
