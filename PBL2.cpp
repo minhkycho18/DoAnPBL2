@@ -27,7 +27,7 @@ void Menu(khachhang ds_kh[],int n,phim ds_phim[], int m){
 		cout << "\n\t1. Dang Nhap Voi Tu Cach Quan Ly ";	
 		cout << "\n\t2. Dang Nhap Voi Tu Cach Nhan Vien Ban ve";
 		cout << "\n\t0. Ket thuc";
-		cout << "\n\n\t\t ============== END ============";	
+		cout << "\n\n\t\t ============== END ==========";	
 		cout << "\nNhap lua chon: ";
 		cin >> luachon;
         if(luachon ==1){
