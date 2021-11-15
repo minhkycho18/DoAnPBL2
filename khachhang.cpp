@@ -10,24 +10,16 @@ khachhang::~khachhang(){
 
 }
 // -----------------------------------------------------------------
-void khachhang::setHoten(string& s){
-    this->Hoten = s;
-}
-void khachhang::setTuoi(int& t){
-    this->tuoi = t;
-}
+
+
 void khachhang::setsoluong(int& sl){
     this->soluong = sl;
 }
 void khachhang::setTongtien(int& tien){
     this->tongtien = tien;
 }
-string khachhang::getHoten(){
-    return this->Hoten;
-}
-int khachhang::getTuoi(){
-    return this->tuoi;
-}
+
+
 int khachhang::getSoluong(){
     return this->soluong;
 }
@@ -38,12 +30,10 @@ int khachhang::getTongtien(){
 
 
 void khachhang::doc(ifstream& in){
-    string ht;
-    int t,sl,tongt;
-    fflush(stdin);
-    getline(in,ht);
-    in >> t;
+    int sl,tongt;
+    fflush(stdin); 
     this->ngaydatve.doc(in);
+    Nguoi::doc(in);
     in >> sl;
     for(int i=0;i<sl ; i++){
         this->ve[i].doc(in);
@@ -51,14 +41,11 @@ void khachhang::doc(ifstream& in){
     in >> tongt;
     char ss[5];
 	in.getline( ss, 3 ); 
-    this->setHoten(ht);
-    this->setTuoi(t);
     this->setsoluong(sl);
     this->setTongtien(tongt);
 }
 void khachhang::ghi(ofstream& o) {
-    o << getHoten() << endl;
-    o << getTuoi() << endl;
+    Nguoi::ghi(o);
     this->ngaydatve.ghi(o);
     o << getSoluong() << endl;
     for(int i=0;i< this->soluong ; i++){
@@ -71,8 +58,7 @@ void khachhang::ghi(ofstream& o) {
 
 void khachhang::input(phim& p){
     cin.ignore();
-    cout << "Nhap Ho Ten: "; fflush(stdin); getline(cin, this->Hoten);
-    cout << "Nhap Tuoi: "; cin >> this->tuoi;
+    Nguoi::input();
     cout << "Nhap Ngay Dat Ve: " << endl;
     ngaydatve.input();
     cout << "Nhap So Luong Ve Khach Mua: "; cin >> this->soluong;
@@ -81,13 +67,12 @@ void khachhang::input(phim& p){
     for (int i = 0; i < this->soluong; ++i)
         {
             ve[i].input(p);
-            this->tongtien += this->ve[i].getgiave();
+            // this->tongtien += this->ve[i].getgiave();
         }
 }
 void khachhang::output(){
     cout << "- Thong Tin Khach Hang: " << endl;
-    cout << "Ho Ten: " << this->Hoten << endl;
-    cout << "Tuoi: " << this->tuoi << endl;
+    Nguoi::output();
     cout << "Ngay dat ve: " << endl;
     ngaydatve.output();
     cout << "So Luong Ve Khach Da Mua: " <<  this->soluong << endl;
@@ -100,3 +85,6 @@ void khachhang::output(){
         cout << "==> Tong Tien = " << this->tongtien;
         cout << endl;
 }
+
+
+// int giabth = 60000;

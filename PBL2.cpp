@@ -1,6 +1,7 @@
-#include "khachhang.h"
 #include <iostream>
 #include <fstream>
+#include "KH_BinhThuong.h"
+// #include "KH_ThanhVien.h"
 using namespace std;
 void ThemPhim(phim ds_phim[], int &m){
     phim p;
@@ -24,7 +25,7 @@ void Cap_Nhat_Du_Lieu(phim ds_phim[], int& m){
         ds_phim[i].doc(dsp);        // Hàm để cập nhật dữ liệu từ file trước khi chạy chương trinh
     }
 }
-void Menu(khachhang ds_kh[],int n,phim ds_phim[], int m){
+void Menu(KH_BinhThuong ds_kh[],int n,phim ds_phim[], int m){
     Cap_Nhat_Du_Lieu(ds_phim,m);
     int luachon;    
         while (true)
@@ -156,10 +157,10 @@ void Menu(khachhang ds_kh[],int n,phim ds_phim[], int m){
 }
 int main(){
     
-    khachhang kh[100];
+    KH_BinhThuong ds_kh[100];
     int n=0;
     phim ds_phim[100];
     int m=0;
-    Menu(kh,n,ds_phim,m);
+    Menu(ds_kh,n,ds_phim,m);
     return 0;
 }

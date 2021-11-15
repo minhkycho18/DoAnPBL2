@@ -6,7 +6,7 @@ using namespace std;
 
 class vexemphim
 {
-private:  
+protected:  
     phim tenphim;
     string SoGhe;
     int giatien;

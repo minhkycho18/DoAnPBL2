@@ -1,5 +1,6 @@
 #include "vexemphim.h"
 #include <fstream>
+
 vexemphim::vexemphim(){
 
 }
@@ -46,7 +47,6 @@ void vexemphim::input(phim& p){
     cin.ignore();
     this->tenphim = p;
     cout << "Nhap so ghe" ; fflush(stdin); getline(cin,this->SoGhe);
-    cout << "Nhap Gia Ve: "; cin >> this->giatien;
 }
 void vexemphim::output(){
     cout << "So ghe: " << this->SoGhe << endl;
