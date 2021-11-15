@@ -2,8 +2,6 @@
     "files.associations": {
         "iostream": "cpp",
         "string": "cpp",
-        "ostream": "cpp",
-        "iosfwd": "cpp",
-        "*.tcc": "cpp"
+        "ostream": "cpp"
     }
 }
