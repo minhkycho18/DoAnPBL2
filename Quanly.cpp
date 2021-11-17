@@ -23,6 +23,16 @@ void QuanLy::DisplayMovie(){
         cout << endl;
     }
 }
+void QuanLy::Cap_Nhat_Du_Lieu(){
+    ifstream tsp,dsp;
+    tsp.open("tongsophim.txt",ios::in);
+    dsp.open("dsphim.txt",ios::in);
+    tsp >> this->m;
+    this->ds_phim = new phim[this->m];
+    for(int i=0; i < this->m; i++){
+        (this->ds_phim + i)->doc(dsp);      // Hàm để cập nhật dữ liệu từ file trước khi chạy chương trinh
+    }
+}
 void QuanLy::ThemPhim(){
     int chon;
     while (true)
@@ -59,7 +69,6 @@ void QuanLy::ThemPhim(){
             delete[] temp;
         }
             this->m++;
-        this->DisplayMovie();
         ofstream dsp,tsp;
         dsp.open("dsphim.txt",ios::out);
         tsp.open("tongsophim.txt",ios::out);
@@ -101,9 +110,8 @@ void QuanLy::ThemPhim(){
         tsp << this->m;
         dsp.close();
         tsp.close();
-        this->DisplayMovie();
         system("pause");
-    }
+    } else
     if(chon == 3){
         cout << "\n Nhap Thong Tin Ve Phim: \n";
         phim p;
@@ -133,16 +141,17 @@ void QuanLy::ThemPhim(){
         tsp.open("tongsophim.txt",ios::out);
         for(int i=0 ; i < this->m; i++){
             (this->ds_phim+i)->ghi(dsp);
+            cout << 1;
         }
         tsp << this->m;
         dsp.close();
         tsp.close();
-        this->DisplayMovie();
+        system("pause");
     }		
 	else
 	{				
 		 break;
 	}  
                         
- }			       
+}			       
 }

@@ -19,9 +19,10 @@
 //     }
 // }
 void Menu(){
-    // Cap_Nhat_Du_Lieu(ds_phim,m);
-    cout << 1;
     QuanLy ql;
+    // cout << 1;
+    ql.Cap_Nhat_Du_Lieu();
+    cout << 1;
     int luachon;    
         while (true)
 	{

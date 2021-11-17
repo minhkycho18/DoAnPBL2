@@ -13,6 +13,7 @@ public:
 public:
     QuanLy();
     ~QuanLy();
+    void Cap_Nhat_Du_Lieu();
     void ThemPhim();
     void XoaPhim();
     void SuaPhim();
