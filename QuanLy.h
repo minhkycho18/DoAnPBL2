@@ -1,13 +1,14 @@
 
 #include "KH_BinhThuong.h"
 #include "KH_ThanhVien.h"
+#include "fstream"
 // #include "khachhang.h"
 class QuanLy 
 {
 public:
-    phim ds_phim[100];
-    KH_BinhThuong ds_khbt[100];
-    // KH_ThanhVien ds_khtv[100];
+    phim *ds_phim;
+    KH_BinhThuong *ds_khbt;
+    KH_ThanhVien *ds_khtv;
     int m,n,p;
 public:
     QuanLy();

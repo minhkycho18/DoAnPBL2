@@ -5,6 +5,7 @@
         "ostream": "cpp",
         "array": "cpp",
         "iosfwd": "cpp",
-        "fstream": "cpp"
+        "fstream": "cpp",
+        "new": "cpp"
     }
 }

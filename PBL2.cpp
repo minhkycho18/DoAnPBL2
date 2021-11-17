@@ -51,7 +51,7 @@ void Menu(){
                 int luachonQL;
                 cin >> luachonQL;
                 if(luachonQL==1) {
-                    // ql.ThemPhim();
+                    ql.ThemPhim();
                 } 
                 if(luachonQL == 2){
 
