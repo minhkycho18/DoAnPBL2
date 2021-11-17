@@ -1,6 +1,8 @@
 #include <iostream>
 #include <fstream>
 using namespace std;
+#ifndef date_h
+#define date_h
 class Date
 {
 private:
@@ -22,6 +24,6 @@ public:
     void doc(ifstream&);
     void ghi(ofstream&);
 };
-
+#endif
 
 

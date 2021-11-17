@@ -1,3 +1,6 @@
+#ifndef phim_h
+#define phim_h
+
 #include <string>
 #include<fstream>
 using namespace std;
@@ -26,4 +29,4 @@ public:
     void doc(ifstream&);
     void ghi(ofstream&);
 };
-
+#endif

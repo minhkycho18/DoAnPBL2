@@ -1,3 +1,5 @@
+#ifndef kh_h
+#define kh_h
 #include "vexemphim.h"
 #include "Date.h"
 #include "Nguoi.h"
@@ -26,6 +28,6 @@ public:
     void ghi(ofstream&);
      void TinhTien() ;
 };
-
+#endif
 
 

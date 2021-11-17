@@ -1,3 +1,5 @@
+#ifndef vxp_h
+#define vxp_h
 #include "phim.h"
 #include <string>
 #include <fstream>
@@ -26,5 +28,6 @@ public:
     void ghi(ofstream&);
     
 };
+#endif
 
 

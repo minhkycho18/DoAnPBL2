@@ -1,3 +1,5 @@
+#ifndef nguoi_h
+#define nguoi_h
 #include <iostream>
 #include <fstream>
 using namespace std;
@@ -21,3 +23,4 @@ public:
     void output();
     
 };
+#endif

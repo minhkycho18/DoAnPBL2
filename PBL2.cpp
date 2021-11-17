@@ -1,32 +1,27 @@
-#include <iostream>
+#include "QuanLy.h"
 #include <fstream>
-#include "KH_BinhThuong.h"
-// #include "KH_ThanhVien.h"
-using namespace std;
-void ThemPhim(phim ds_phim[], int &m){
-    phim p;
-    p.input();
-    ds_phim[m] = p;           // Hàm để thêm phim vào cuối mảng
-    m++;
-}
-void Xem_DS_phim(phim ds_phim[],int& m){
-    for (int i=0;i< m; i++){
-        cout << i << "." << endl;
-        ds_phim[i].output();
-        cout << endl;
-    }
-}
-void Cap_Nhat_Du_Lieu(phim ds_phim[], int& m){
-    ifstream tsp,dsp;
-    tsp.open("tongsophim.txt",ios::in);
-    dsp.open("dsphim.txt",ios::in);
-    tsp >> m;
-    for(int i=0; i < m; i++){
-        ds_phim[i].doc(dsp);        // Hàm để cập nhật dữ liệu từ file trước khi chạy chương trinh
-    }
-}
-void Menu(KH_BinhThuong ds_kh[],int n,phim ds_phim[], int m){
-    Cap_Nhat_Du_Lieu(ds_phim,m);
+
+
+// void Xem_DS_phim(phim ds_phim[],int& m){
+//     for (int i=0;i< m; i++){
+//         cout << i << "." << endl;
+//         ds_phim[i].output();
+//         cout << endl;
+//     }
+// }
+// void Cap_Nhat_Du_Lieu(phim ds_phim[], int& m){
+//     ifstream tsp,dsp;
+//     tsp.open("tongsophim.txt",ios::in);
+//     dsp.open("dsphim.txt",ios::in);
+//     tsp >> m;
+//     for(int i=0; i < m; i++){
+//         ds_phim[i].doc(dsp);        // Hàm để cập nhật dữ liệu từ file trước khi chạy chương trinh
+//     }
+// }
+void Menu(){
+    // Cap_Nhat_Du_Lieu(ds_phim,m);
+    cout << 1;
+    QuanLy ql;
     int luachon;    
         while (true)
 	{
@@ -45,7 +40,8 @@ void Menu(KH_BinhThuong ds_kh[],int n,phim ds_phim[], int m){
                 cout << "\n\n\t\t ====== Bang Hien Thi Quan ly ======";
                 cout << "\n\t1. Them Phim Vao Danh Sach Phim ";	
                 cout << "\n\t2. Xoa Phim Trong Danh Sach Phim ";	
-                cout << "\n\t3. Khoi Tao Toan Bo Danh Sach Phim ";	
+                cout << "\n\t4. Sua Phim Trong Danh Sach Phim ";	
+                cout << "\n\t3. Khoi Tao Toan Bo Danh Sach Phim ";
 		        cout << "\n\t4. Xem Danh Sach Phim Hien Tai";
                 cout << "\n\t5. Xem Doanh Thu Tong ";
                 cout << "\n\t6. Danh Sach Khach Hang Da Mua Ve";
@@ -55,75 +51,48 @@ void Menu(KH_BinhThuong ds_kh[],int n,phim ds_phim[], int m){
                 int luachonQL;
                 cin >> luachonQL;
                 if(luachonQL==1) {
-                    int chon;
-			        while (true)
-			        {
-				        system("cls");
-				        cout << "\n1. Nhap phim:";
-				        cout << "\n0. Ket thuc:";
-				        cout << endl;
-				        cout << "\nNhap lua chon: ";
-				        cin >> chon;
-
-				        if (chon == 1)
-				        {
-				        	cout << "\n Nhap Thong Tin Ve Phim: \n";
-        			        ThemPhim(ds_phim,m);
-                            ofstream dsp,tsp;
-                            dsp.open("dsphim.txt",ios::app);
-                            tsp.open("tongsophim.txt",ios::out);
-                            ds_phim[m-1].ghi(dsp);
-                            tsp << m;
-                            dsp.close();
-                            tsp.close();
-				        }				
-				        else
-				        {				
-					        break;
-				        }
-                        
-			        }
+                    // ql.ThemPhim();
                 } 
                 if(luachonQL == 2){
 
                 }
                 if(luachonQL == 3){
-                    int chon;
-                    ofstream clr;
-                    clr.open("dsphim.txt",ios::out);
-                    clr.close();
-                    m=0;
-			        while (true)
-			        {
-				        system("cls");
-				        cout << "\n1. Nhap phim:";
-				        cout << "\n0. Ket thuc:";
-				        cout << endl;
-				        cout << "\nNhap lua chon: ";
-				        cin >> chon;
+                    // int chon;
+                    // ofstream clr;
+                    // clr.open("dsphim.txt",ios::out);
+                    // clr.close();
+                    // m=0;
+			        // while (true)
+			        // {
+				        // system("cls");
+				        // cout << "\n1. Nhap phim:";
+				        // cout << "\n0. Ket thuc:";
+				        // cout << endl;
+				        // cout << "\nNhap lua chon: ";
+				        // cin >> chon;
 
-				        if (chon == 1)
-				        {
-				        	cout << "\n Nhap Thong Tin Ve Phim: \n";
-        			        ThemPhim(ds_phim,m);
-                            ofstream dsp,tsp;
-                            dsp.open("dsphim.txt",ios::app);
-                            tsp.open("tongsophim.txt",ios::out);
-                            ds_phim[m-1].ghi(dsp);
-                            tsp << m;
-                            dsp.close();
-                            tsp.close();
-				        }				
-				        else
-				        {				
-					        break;
-				        }
-                    }
+				        // if (chon == 1)
+				        // {
+				        // 	cout << "\n Nhap Thong Tin Ve Phim: \n";
+        			    //     ThemPhim(ds_phim,m);
+                        //     ofstream dsp,tsp;
+                        //     dsp.open("dsphim.txt",ios::app);
+                        //     tsp.open("tongsophim.txt",ios::out);
+                        //     ds_phim[m-1].ghi(dsp);
+                        //     tsp << m;
+                        //     dsp.close();
+                        //     tsp.close();
+				        // }				
+				        // else
+				        // {				
+					    //     break;
+				        // }
+                    // }
                 }    
                 if(luachonQL == 4){
-                    system("cls");
-                    Xem_DS_phim(ds_phim,m);
-                    system("pause");
+                    // system("cls");
+                    // Xem_DS_phim(ds_phim,m);
+                    // system("pause");
                 }
                 if(luachonQL == 5){
                     
@@ -157,10 +126,6 @@ void Menu(KH_BinhThuong ds_kh[],int n,phim ds_phim[], int m){
 }
 int main(){
     
-    KH_BinhThuong ds_kh[100];
-    int n=0;
-    phim ds_phim[100];
-    int m=0;
-    Menu(ds_kh,n,ds_phim,m);
+    Menu();
     return 0;
 }
