@@ -1,3 +1,5 @@
+#ifndef khtv_h
+#define khtv_h
 #include "khachhang.h"
 class KH_ThanhVien : public khachhang
 {
@@ -8,5 +10,5 @@ public:
 // Overide
     void TinhTien();
 };
-
+#endif
 

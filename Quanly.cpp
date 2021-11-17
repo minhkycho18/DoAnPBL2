@@ -5,8 +5,8 @@ QuanLy::QuanLy()
     this->n=0;
     this->p=0;
     this->ds_phim[this->m];
-    this->ds_khbt[this->n];
-    this->ds_khtv[this->p];
+    // this->ds_khbt[this->n];
+    // this->ds_khtv[this->p];
 }
 
 QuanLy::~QuanLy()
