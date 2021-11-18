@@ -155,3 +155,119 @@ void QuanLy::ThemPhim(){
                         
 }			       
 }
+void QuanLy::XoaPhim()
+{   
+    this->DisplayMovie();
+    int chon;
+    while(true)
+    {
+        system("cls");
+        cout << "\n\n\t\t ====== Xoa Phim ======";
+	    cout << "\n1. Xoa Phim Dau Tien";
+        cout << "\n2. Xoa Phim Cuoi Cung";
+        cout << "\n3. Xoa Phim Vi Tri Tuy Chon";
+	    cout << "\n0. Ket thuc:";
+	    cout << endl;
+	    cout << "\nNhap lua chon: ";
+	    cin >> chon;
+    
+
+    if (chon == 1)
+    {
+        phim p;
+        if(this->m==0)
+        {
+            cout <<"\nDanh sach phim trong!\n";
+        }
+        else
+        {   phim *temp = new phim[this->m];
+            for(int i=0; i<this->m;i++)
+                *(temp+i) = *(this->ds_phim + i +1);
+            delete[] this ->ds_phim;
+            this->ds_phim = new phim[this->m -1];
+            for(int i=0; i<this->m-1;i++)
+                *(this->ds_phim + i) = *(temp + i);
+        // *(this->ds_phim) = p;
+        delete[] temp;
+        }
+        this->m--;
+    ofstream dsp, tsp;
+    dsp.open("dsphim.txt", ios::out);
+    tsp.open("tongsophim.txt", ios::out);
+    for(int i=0; i<this->m; i++){
+        (this->ds_phim+i)->ghi(tsp);
+    }
+    tsp << this->m;
+    dsp.close();
+    tsp.close();
+    system("pause");
+    }
+    else
+    if(chon==2)
+    {
+        phim p;
+        if(this->m==0)
+        {
+            cout <<"\nDanh sach phim trong!\n";
+        }
+        else{
+            phim *temp = new phim[this->m];
+            for(int i=0;i < this->m-1;i++)
+                *(temp+i) = *(this->ds_phim+i);
+            delete[] this->ds_phim;
+            this->ds_phim = new phim[this->m-1];
+            for(int i=0; i<this->m-1; i++)
+                *(this->ds_phim + i) = *(temp + i);
+        // *(this->ds_phim) = p;
+        delete[] temp;
+        }
+        this->m--;
+    ofstream dsp, tsp;
+    dsp.open("dsphim.txt", ios::out);
+    tsp.open("tongsophim.txt", ios::out);
+    for(int i=0; i<this->m; i++){
+        (this->ds_phim+i)->ghi(tsp);
+    }
+    tsp << this->m;
+    dsp.close();
+    tsp.close();
+    system("pause");
+    }
+    else
+    if( chon == 3){
+        phim p;
+        cout <<"\n Nhap Vi Tri Can Xoa: ";
+        int k;
+        cin >> k;
+        phim *temp = new phim[this->m];
+        for(int i =0;i<this->m-1;i++){
+            if(i<k){
+                *(this->ds_phim + i) = *(temp+i);
+            } 
+            else if(i==k) {
+                *(this->ds_phim+i) =p;
+            } 
+            else {
+                *(this-> ds_phim +i-1) = *(temp +i);
+            }
+        }
+        delete[] temp;
+        this->m++;
+
+        ofstream dsp,tsp;
+        dsp.open("dsphim.txt",ios::out);
+        tsp.open("tongsophim.txt",ios::out);
+        for(int i=0 ; i < this->m; i++){
+            (this->ds_phim+i)->ghi(dsp);
+            cout << 1;
+        }
+        tsp << this->m;
+        dsp.close();
+        tsp.close();
+        system("pause");
+    }
+    else{
+        break;
+    }
+    }
+}
