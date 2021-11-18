@@ -245,6 +245,9 @@ void QuanLy::XoaPhim()
         cout <<"\n Nhap Vi Tri Can Xoa: ";
         int k;
         cin >> k;
+        if(k>=m){
+            cout << "Vui Long Nhap Lai.";
+        } else {
         phim *temp = new phim[this->m];
         for(int i=0;i < this->m;i++)
             *(temp+i) = *(this->ds_phim+i);
@@ -260,6 +263,7 @@ void QuanLy::XoaPhim()
         }
         delete[] temp;
         this->m--;
+        }
         ofstream dsp,tsp;
         dsp.open("dsphim.txt",ios::out);
         tsp.open("tongsophim.txt",ios::out);
@@ -275,5 +279,14 @@ void QuanLy::XoaPhim()
     else{
         break;
     }
+    }
+}
+void QuanLy::SuaPhim(){  
+    int chon;
+    while(true)
+    {
+        system("cls");
+        this->DisplayMovie();
+        cout << "\n Nhap So Thu Tu Phim Muon Sua: "; cin >> chon;
     }
 }

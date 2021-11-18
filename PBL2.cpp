@@ -41,11 +41,11 @@ void Menu(){
                 cout << "\n\n\t\t ====== Bang Hien Thi Quan ly ======";
                 cout << "\n\t1. Them Phim Vao Danh Sach Phim ";	
                 cout << "\n\t2. Xoa Phim Trong Danh Sach Phim ";	
-                cout << "\n\t4. Sua Phim Trong Danh Sach Phim ";	
-                cout << "\n\t3. Khoi Tao Toan Bo Danh Sach Phim ";
-		        cout << "\n\t4. Xem Danh Sach Phim Hien Tai";
-                cout << "\n\t5. Xem Doanh Thu Tong ";
-                cout << "\n\t6. Danh Sach Khach Hang Da Mua Ve";
+                cout << "\n\t3. Sua Phim Trong Danh Sach Phim ";	
+                cout << "\n\t4. Khoi Tao Toan Bo Danh Sach Phim ";
+		        cout << "\n\t5. Xem Danh Sach Phim Hien Tai";
+                cout << "\n\t6. Xem Doanh Thu Tong ";
+                cout << "\n\t7. Danh Sach Khach Hang Da Mua Ve";
                 cout << "\n\t0. Ket Thuc";
                 cout << "\n\n\t\t ============== END ============";	
 		        cout << "\nNhap lua chon: ";
@@ -97,7 +97,7 @@ void Menu(){
                     // system("pause");
                 }
                 if(luachonQL == 5){
-                    
+                    ql.DisplayMovie();
                 }
                 else{
                     break;
