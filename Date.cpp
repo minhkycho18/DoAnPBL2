@@ -34,6 +34,8 @@ void Date::doc(ifstream& in){
 	in >> d;
     in >> m;
     in >> y;
+    char ss[5];
+	in.getline( ss, 3 ); 
 	this->setday(d);
 	this->setday(m);
     this->setday(y);

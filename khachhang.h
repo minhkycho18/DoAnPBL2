@@ -1,26 +1,23 @@
+#ifndef kh_h
+#define kh_h
 #include "vexemphim.h"
 #include "Date.h"
+#include "Nguoi.h"
 #include <fstream>
 using namespace std;
-class khachhang
+class khachhang : public Nguoi
 {
-private:
-    string Hoten;
+protected:
     Date ngaydatve;
-    int tuoi;
     vexemphim ve[100];
     int soluong;
-    int tongtien;
+    unsigned int tongtien;
 public:
     khachhang();
     ~khachhang();
     // ----------------Cụm hàm get set------------------------
-    void setHoten(string&);
-    void setTuoi(int&);
     void setsoluong(int&);
-    void setTongtien(int&);
-    string getHoten();
-    int getTuoi();
+    void setTongtien(int&);  
     int getSoluong();
     int getTongtien();
     //-----------------Nhập và suất----------------------------
@@ -29,7 +26,8 @@ public:
     //-----------------Các phương thức đọc và ghi file---------
     void doc(ifstream&);
     void ghi(ofstream&);
+    virtual void TinhTien() = 0 ;
 };
-
+#endif
 
 

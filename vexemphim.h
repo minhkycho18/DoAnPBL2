@@ -1,3 +1,5 @@
+#ifndef vxp_h
+#define vxp_h
 #include "phim.h"
 #include <string>
 #include <fstream>
@@ -6,7 +8,7 @@ using namespace std;
 
 class vexemphim
 {
-private:  
+protected:  
     phim tenphim;
     string SoGhe;
     int giatien;
@@ -26,5 +28,6 @@ public:
     void ghi(ofstream&);
     
 };
+#endif
 
 
