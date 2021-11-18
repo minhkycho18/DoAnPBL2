@@ -52,10 +52,11 @@ void Menu(){
                 int luachonQL;
                 cin >> luachonQL;
                 if(luachonQL==1) {
+                    system("cls");
                     ql.ThemPhim();
                 } 
                 if(luachonQL == 2){
-
+                    ql.XoaPhim();
                 }
                 if(luachonQL == 3){
                     // int chon;
