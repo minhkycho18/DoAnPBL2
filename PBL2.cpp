@@ -42,10 +42,9 @@ void Menu(){
                 cout << "\n\t1. Them Phim Vao Danh Sach Phim ";	
                 cout << "\n\t2. Xoa Phim Trong Danh Sach Phim ";	
                 cout << "\n\t3. Sua Phim Trong Danh Sach Phim ";	
-                cout << "\n\t4. Khoi Tao Toan Bo Danh Sach Phim ";
-		        cout << "\n\t5. Xem Danh Sach Phim Hien Tai";
-                cout << "\n\t6. Xem Doanh Thu Tong ";
-                cout << "\n\t7. Danh Sach Khach Hang Da Mua Ve";
+		        cout << "\n\t4. Xem Danh Sach Phim Hien Tai";
+                cout << "\n\t5. Xem Doanh Thu Tong ";
+                cout << "\n\t6. Danh Sach Khach Hang Da Mua Ve";
                 cout << "\n\t0. Ket Thuc";
                 cout << "\n\n\t\t ============== END ============";	
 		        cout << "\nNhap lua chon: ";
@@ -56,47 +55,15 @@ void Menu(){
                     ql.ThemPhim();
                 } 
                 if(luachonQL == 2){
+                    system("cls");
                     ql.XoaPhim();
                 }
                 if(luachonQL == 3){
-                    // int chon;
-                    // ofstream clr;
-                    // clr.open("dsphim.txt",ios::out);
-                    // clr.close();
-                    // m=0;
-			        // while (true)
-			        // {
-				        // system("cls");
-				        // cout << "\n1. Nhap phim:";
-				        // cout << "\n0. Ket thuc:";
-				        // cout << endl;
-				        // cout << "\nNhap lua chon: ";
-				        // cin >> chon;
-
-				        // if (chon == 1)
-				        // {
-				        // 	cout << "\n Nhap Thong Tin Ve Phim: \n";
-        			    //     ThemPhim(ds_phim,m);
-                        //     ofstream dsp,tsp;
-                        //     dsp.open("dsphim.txt",ios::app);
-                        //     tsp.open("tongsophim.txt",ios::out);
-                        //     ds_phim[m-1].ghi(dsp);
-                        //     tsp << m;
-                        //     dsp.close();
-                        //     tsp.close();
-				        // }				
-				        // else
-				        // {				
-					    //     break;
-				        // }
-                    // }
+                    system("cls");
+                    ql.SuaPhim();
                 }    
                 if(luachonQL == 4){
-                    // system("cls");
-                    // Xem_DS_phim(ds_phim,m);
-                    // system("pause");
-                }
-                if(luachonQL == 5){
+                    system("cls");
                     ql.DisplayMovie();
                 }
                 else{

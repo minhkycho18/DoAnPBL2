@@ -126,7 +126,9 @@ void QuanLy::ThemPhim(){
         cout << "\n Nhap Vi Tri Can Them Phim : ";
         int k;
         cin >> k;
-        
+        if(k>=m){
+            cout << "\nVi Tri Them Khong Hop Le\n";
+        }
         phim *temp = new phim[this->m];
         for(int i=0;i < this-> m;i++)
             *(temp+i) = *(this->ds_phim+i);
@@ -246,7 +248,7 @@ void QuanLy::XoaPhim()
         int k;
         cin >> k;
         if(k>=m){
-            cout << "Vui Long Nhap Lai.";
+            cout << "\nVi Tri Xoa Khong Hop Le\n";
         } else {
         phim *temp = new phim[this->m];
         for(int i=0;i < this->m;i++)
@@ -283,10 +285,60 @@ void QuanLy::XoaPhim()
 }
 void QuanLy::SuaPhim(){  
     int chon;
-    while(true)
-    {
-        system("cls");
+    while (true)
+	{
+        int select;
+		system("cls");
         this->DisplayMovie();
-        cout << "\n Nhap So Thu Tu Phim Muon Sua: "; cin >> chon;
+		cout << "\n1. Bat Dau Sua Phim:";
+		cout << "\n0. Ket thuc:";
+		cout << endl;
+		cout << "\nNhap lua chon: ";
+		cin >> chon;
+        if(chon == 1) {
+            int option;
+            cout << "\n Nhap So Thu Tu Phim Muon Sua: "; cin >> select;
+            while(select >= this->m){
+                cout << "\n Khong Ton Tai Vi Tri Phim, \n Vui Long Nhap Lai.";
+                cin >> select;
+            }
+            while(true){
+                system("cls");
+                (this->ds_phim+select)->output();
+                cout << "\n Chon Thuoc Tinh Muon Sua: ";
+                cout << "\n1. Ten Phim:";
+                cout << "\n2. The Loai Phim:";
+                cout << "\n3. Thoi Luong Phim:";
+                cout << "\n0. Ket Thuc";
+                cout << endl;
+                cout << "\nNhap lua chon: ";
+                cin >>  option;
+                if(option == 1){
+                    string temp;
+                    cout << "\nNhap Ten Phim: ";fflush(stdin);getline(cin,temp);
+                    (this->ds_phim+select)->setTenPhim(temp);
+                } else
+                if(option == 2){
+                    string temp;
+                    cout << "\nNhap The Loai Phim: ";fflush(stdin);getline(cin,temp);
+                    (this->ds_phim+select)->setTheLoai(temp);
+                } else 
+                if(option == 3){
+                    int temp;
+                    cout << "\n Nhap Thoi Luong Phim: "; cin >> temp;
+                    (this->ds_phim+select)->setThoiLuongPhim(temp);
+                } else {
+                    break;
+                }
+            }
+        } else {
+            break;
+        }				        
     }
+    ofstream dsp;
+    dsp.open("dsphim.txt", ios::out);
+    for(int i=0; i<this->m; i++){
+        (this->ds_phim+i)->ghi(dsp);
+    }
+    dsp.close();
 }
