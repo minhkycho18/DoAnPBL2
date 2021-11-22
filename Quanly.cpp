@@ -17,10 +17,7 @@ QuanLy::~QuanLy()
     delete[] this->ds_khbt;
 }
 void QuanLy::DisplayMovie(){  
-    if(this->m==0)
-    {
-        cout <<"\nDanh sach phim trong!\n";
-    } else {
+    // 1
     cout << "------------------Danh Sach Phim-------------------------\n";
     for (int i=0;i< m; i++){
         cout << i << "." << endl;
@@ -28,7 +25,7 @@ void QuanLy::DisplayMovie(){
         cout << endl;
     }
     cout << "---------------------------------------------------------\n";
-    }
+    // }
 }
 void QuanLy::Cap_Nhat_Du_Lieu(){
     ifstream tsp,dsp;

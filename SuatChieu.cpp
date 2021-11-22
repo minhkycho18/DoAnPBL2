@@ -14,8 +14,10 @@ string SuatChieu::getTime(){
 }
 void SuatChieu::doc(ifstream& in){
     string t;
-	fflush(stdin);
+    // fflush(stdin);
 	getline(in, t);
+    // char ss[5];
+	// in.getline( ss, 3 ); 
     this->setTime(t);  	
 }
 void SuatChieu::ghi(ofstream& o){
@@ -23,9 +25,9 @@ void SuatChieu::ghi(ofstream& o){
     
 }
 void SuatChieu::input(){
-    cin.ignore();
+    
     fflush(stdin); getline(cin,this->time);
 }
 void SuatChieu::output(){
-    cout << this->time << ", "; 
+    cout << getTime() ; 
 }
