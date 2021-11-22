@@ -29,5 +29,5 @@ void SuatChieu::input(){
     fflush(stdin); getline(cin,this->time);
 }
 void SuatChieu::output(){
-    cout << getTime() ; 
+    cout << getTime() << ", "; 
 }

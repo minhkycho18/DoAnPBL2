@@ -24,7 +24,7 @@ void Menu(){
     int luachon;    
         while (true)
 	{
-		// system("cls");
+		system("cls");
 		cout << "\n\n\t\t ====== QUAN LY BAN VE ======";
 		cout << "\n\t1. Dang Nhap Voi Tu Cach Quan Ly ";	
 		cout << "\n\t2. Dang Nhap Voi Tu Cach Nhan Vien Ban ve";
@@ -63,6 +63,7 @@ void Menu(){
                 if(luachonQL == 4){
                     system("cls");
                     ql.DisplayMovie();
+                    system("pause");
                 }
                 else{
                     break;

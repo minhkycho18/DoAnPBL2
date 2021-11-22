@@ -52,15 +52,14 @@ void phim::doc(ifstream& in){
 	getline(in, ht);
 	getline(in, tl);
 	in >> thoiluong;
-    in >> sl;
+    in >> sl;   
+    char ss[5];
+	in.getline( ss, 3 ); 
     this->dssc = new SuatChieu[sl];
     for (int i = 0; i < sl; i++)
     {
-    (this->dssc + i)->doc(in);
+        (this->dssc + i)->doc(in);
     } 
-    
-    char ss[5];
-	in.getline( ss, 3 ); 
 	this->setTenPhim(ht);
 	this->setTheLoai(tl);
 	this->setThoiLuongPhim(thoiluong);
@@ -101,7 +100,7 @@ void phim::output(){
     cout << "Suat Chieu : " ;
     for (int  i = 0; i < this->SLSuat; i++)
     {
-        (this->dssc + 0)->output();
+        (this->dssc + i)->output();
     }
     
 }
