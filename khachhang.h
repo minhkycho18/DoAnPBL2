@@ -9,7 +9,7 @@ class khachhang : public Nguoi
 {
 protected:
     Date ngaydatve;
-    vexemphim ve[100];
+    vexemphim ve[50];
     int soluong;
     unsigned int tongtien;
 public:
@@ -21,12 +21,13 @@ public:
     int getSoluong();
     int getTongtien();
     //-----------------Nhập và suất----------------------------
-    void input(phim&);
+    virtual void input(phim&) = 0;
     void output();
     //-----------------Các phương thức đọc và ghi file---------
     void doc(ifstream&);
     void ghi(ofstream&);
-    virtual void TinhTien() = 0 ;
+    // virtual void TinhTien() = 0 ;
+    // void Datve();
 };
 #endif
 

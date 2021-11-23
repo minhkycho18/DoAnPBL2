@@ -11,7 +11,7 @@ vexemphim::~vexemphim(){
 void vexemphim::setSoghe(string& s){
     this->SoGhe = s;
 }
-void vexemphim::setgiave(int& gt){
+void vexemphim::setgiave( int& gt){
     this->giatien = gt;
 }
 string vexemphim::getSoghe(){

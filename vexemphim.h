@@ -17,7 +17,7 @@ public:
     ~vexemphim();
     // ----------------Cụm hàm get set------------------------
     void setSoghe(string&);
-    void setgiave(int&);
+    void setgiave( int&);
     string getSoghe();
     int getgiave();
     //-----------------Nhập và suất----------------------------

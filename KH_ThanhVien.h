@@ -3,12 +3,15 @@
 #include "khachhang.h"
 class KH_ThanhVien : public khachhang
 {
-
-public:
-    KH_ThanhVien();
-    ~KH_ThanhVien();
-// Overide
-    void TinhTien();
+    private:
+        string LoaiKH;
+        int giatv;
+    public:
+        KH_ThanhVien();
+        ~KH_ThanhVien();
+    // Overide
+    // void TinhTien();
+    void input(phim&);
 };
 #endif
 

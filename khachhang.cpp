@@ -56,20 +56,20 @@ void khachhang::ghi(ofstream& o) {
 // -----------------------------------------------------------------
 
 
-void khachhang::input(phim& p){
-    cin.ignore();
-    Nguoi::input();
-    cout << "Nhap Ngay Dat Ve: " << endl;
-    ngaydatve.input();
-    cout << "Nhap So Luong Ve Khach Mua: "; cin >> this->soluong;
-        //ve = new Vemaybay[this->soluong];
-    ve[this->soluong];
-    for (int i = 0; i < this->soluong; ++i)
-        {
-            ve[i].input(p);
-            // this->tongtien += this->ve[i].getgiave();
-        }
-}
+// void khachhang::input(phim& p){
+//     cin.ignore();
+//     Nguoi::input();
+//     cout << "Nhap Ngay Dat Ve: " << endl;
+//     ngaydatve.input();
+//     cout << "Nhap So Luong Ve Khach Mua: "; cin >> this->soluong;
+//         //ve = new Vemaybay[this->soluong];
+//     ve[this->soluong];
+//     for (int i = 0; i < this->soluong; ++i)
+//         {
+//             ve[i].input(p);
+//             // this->tongtien += this->ve[i].getgiave();
+//         }
+// }
 void khachhang::output(){
     cout << "- Thong Tin Khach Hang: " << endl;
     Nguoi::output();

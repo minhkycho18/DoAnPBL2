@@ -2,7 +2,6 @@
 #include "KH_BinhThuong.h"
 #include "KH_ThanhVien.h"
 #include "fstream"
-// #include "khachhang.h"
 class QuanLy 
 {
 public:
@@ -13,10 +12,15 @@ public:
 public:
     QuanLy();
     ~QuanLy();
+    //----------------------------Phim---------------------------------
     void Cap_Nhat_Du_Lieu();
     void ThemPhim();
     void XoaPhim();
     void SuaPhim();
     void DisplayMovie();
+    //----------------------------KhachHang--------------------------------
+    void Datve();
+    void addCustomer(const int&, phim&);
+
 };
 

@@ -82,6 +82,9 @@ void Menu(){
 		        cout << "\nNhap lua chon: ";
                 int luachonNV;
                 cin >> luachonNV;
+                if(luachonNV == 1){
+                    ql.Datve();
+                }
             }
             
         }

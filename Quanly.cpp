@@ -339,3 +339,49 @@ void QuanLy::SuaPhim(){
     }
     dsp.close();
 }
+void QuanLy::addCustomer(const int& a,phim& p){
+    if(a == 1) {
+        KH_ThanhVien tv;
+        tv.input(p);
+        if(this->m==0){
+            this->ds_khtv = new KH_ThanhVien[this->m+1];        
+            *(this->ds_khtv + this->m)= tv;
+        } else {
+            KH_ThanhVien *temp = new KH_ThanhVien[this->m];
+            for(int i=0;i < this-> m;i++)
+                *(temp+i) = *(this->ds_khtv+i);
+            delete[] this->ds_khtv;
+            this->ds_khtv = new KH_ThanhVien[this->m+1];
+            for(int i=0;i<m;i++){
+                *(this->ds_khtv+i) = *(temp+i);
+            }
+            *(this->ds_khtv+this->m) = tv;
+            delete[] temp;
+        }
+            this->m++;
+    } 
+        ofstream dskh,tskh;
+        
+}
+void QuanLy::Datve(){
+    int chon;
+    while (true)
+	{
+		system("cls");
+        this->DisplayMovie();
+		cout << "\n======Vui Long Chon Phim:==============";
+		cout << endl;
+		cout << "\nNhap lua chon: ";
+		cin >> chon;
+        system("cls");
+        int select;
+        cout << "\n===== Ban Co The Thanh Vien Khong ?=====";
+        cout << "\n1.Co";
+        cout << "\n2.Khong";
+        cout << "\n0.Ket Thuc";
+        cout << endl;
+		cout << "\nNhap lua chon: ";
+		cin >> select;
+        this->addCustomer(select,*(this->ds_phim+chon));
+    }
+}
