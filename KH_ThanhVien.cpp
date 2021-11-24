@@ -6,6 +6,12 @@ KH_ThanhVien::KH_ThanhVien()
 KH_ThanhVien::~KH_ThanhVien()
 {
 }
+void KH_ThanhVien::setLoaiKH(string s){
+    this->LoaiKH = s;
+}
+void KH_ThanhVien::setgia(int a){
+    this->gia = a;
+}
 // void KH_ThanhVien::TinhTien(){
 //     int giatienbth = 75000;
 //     for(int i=0; i< this->soluong; i++){
@@ -14,9 +20,9 @@ KH_ThanhVien::~KH_ThanhVien()
 //     }
 // }
 void KH_ThanhVien::input( phim& p){
+    this->setLoaiKH();
+    this->setgia();
     cin.ignore();
-    this->LoaiKH = "binhthuong";
-    this->giatv = 55000;
     Nguoi::input();
     cout << "Nhap Ngay Dat Ve: " << endl;
     ngaydatve.input();
@@ -26,7 +32,17 @@ void KH_ThanhVien::input( phim& p){
     for (int i = 0; i < this->soluong; ++i)
         {
             ve[i].input(p);
-            ve[i].setgiave(this->giatv);
+            ve[i].setgiave(this->gia);
             this->tongtien += this->ve[i].getgiave();
         }
+}
+void KH_ThanhVien::ghi(ofstream& o) {
+    o << this->LoaiKH << endl;
+    Nguoi::ghi(o);
+    this->ngaydatve.ghi(o);
+    o << getSoluong() << endl;
+    for(int i=0;i< this->soluong ; i++){
+        this->ve[i].ghi(o);
+    }
+    o << getTongtien() << endl;
 }

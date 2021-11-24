@@ -340,27 +340,67 @@ void QuanLy::SuaPhim(){
     dsp.close();
 }
 void QuanLy::addCustomer(const int& a,phim& p){
+    cout << 1;
     if(a == 1) {
         KH_ThanhVien tv;
         tv.input(p);
-        if(this->m==0){
-            this->ds_khtv = new KH_ThanhVien[this->m+1];        
-            *(this->ds_khtv + this->m)= tv;
+        if(this->p==0){
+            this->ds_khtv = new KH_ThanhVien[this->p+1];        
+            *(this->ds_khtv + this->p)= tv;
         } else {
-            KH_ThanhVien *temp = new KH_ThanhVien[this->m];
-            for(int i=0;i < this-> m;i++)
+            KH_ThanhVien *temp = new KH_ThanhVien[this->p];
+            for(int i=0;i < this-> p;i++)
                 *(temp+i) = *(this->ds_khtv+i);
             delete[] this->ds_khtv;
-            this->ds_khtv = new KH_ThanhVien[this->m+1];
-            for(int i=0;i<m;i++){
+            this->ds_khtv = new KH_ThanhVien[this->p+1];
+            for(int i=0;i<this->p;i++){
                 *(this->ds_khtv+i) = *(temp+i);
             }
-            *(this->ds_khtv+this->m) = tv;
+            *(this->ds_khtv+this->p) = tv;
+            delete[] temp;
+            ofstream dskh,tskh;
+            dskh.open("dskhachhang.txt",ios::out);
+            tskh.open("tongsoKH.txt",ios::out);
+            tskh << this->n + this->p;
+        }
+            this->p++;
+            ofstream dskh,tskh;
+            dskh.open("dskhachhang.txt",ios::app);
+            tskh.open("tongsoKH.txt",ios::out);
+            tskh << this->p + this->n;
+            (this->ds_khtv + this->p -1)->ghi(dskh);
+            dskh.close();
+            tskh.close();
+
+    } else {
+        KH_BinhThuong bt;
+        bt.input(p);
+        if(this->n==0){
+            this->ds_khbt = new KH_BinhThuong[this->n+1];        
+            *(this->ds_khbt + this->n) = bt;
+        } else {
+            KH_BinhThuong *temp = new KH_BinhThuong[this->n];
+            for(int i=0;i < this-> n;i++)
+                *(temp+i) = *(this->ds_khbt+i);
+            delete[] this->ds_khbt;
+            this->ds_khbt = new KH_BinhThuong[this->n+1];
+            for(int i=0;i<n;i++){
+                *(this->ds_khbt+i) = *(temp+i);
+            }
+            *(this->ds_khbt+this->n) = bt;
             delete[] temp;
         }
-            this->m++;
-    } 
-        ofstream dskh,tskh;
+            this->n++;
+            ofstream dskh,tskh;
+            dskh.open("dskhachhang.txt",ios::app);
+            tskh.open("tongsoKH.txt",ios::out);
+            tskh << this->p + this->n;
+            (this->ds_khbt + this->n -1)->ghi(dskh);
+            dskh.close();
+            tskh.close();
+    }
+
+        
         
 }
 void QuanLy::Datve(){

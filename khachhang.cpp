@@ -44,15 +44,15 @@ void khachhang::doc(ifstream& in){
     this->setsoluong(sl);
     this->setTongtien(tongt);
 }
-void khachhang::ghi(ofstream& o) {
-    Nguoi::ghi(o);
-    this->ngaydatve.ghi(o);
-    o << getSoluong() << endl;
-    for(int i=0;i< this->soluong ; i++){
-        this->ve[i].ghi(o);
-    }
-    o << getTongtien() << endl;
-}
+// void khachhang::ghi(ofstream& o) {
+//     Nguoi::ghi(o);
+//     this->ngaydatve.ghi(o);
+//     o << getSoluong() << endl;
+//     for(int i=0;i< this->soluong ; i++){
+//         this->ve[i].ghi(o);
+//     }
+//     o << getTongtien() << endl;
+// }
 // -----------------------------------------------------------------
 
 

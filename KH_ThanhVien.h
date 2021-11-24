@@ -5,13 +5,16 @@ class KH_ThanhVien : public khachhang
 {
     private:
         string LoaiKH;
-        int giatv;
+        int gia;
     public:
         KH_ThanhVien();
         ~KH_ThanhVien();
+        void setLoaiKH(string = "thanhvien");
+        void setgia(int =55000);
     // Overide
     // void TinhTien();
     void input(phim&);
+    void ghi(ofstream&);
 };
 #endif
 
