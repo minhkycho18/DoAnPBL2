@@ -1,14 +1,11 @@
-
-
-
 thanhvien
 minh
 18
-18
-12
+24
+11
 2021
-2
-45
+1
+36
 nguoi nhen
 hanh dong
 120
@@ -17,13 +14,4 @@ hanh dong
 15:00
 16:00
 55000
-12
-nguoi nhen
-hanh dong
-120
-3
-14:00
-15:00
-16:00
 55000
-142763

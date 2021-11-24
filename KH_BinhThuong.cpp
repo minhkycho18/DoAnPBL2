@@ -23,7 +23,6 @@ void KH_BinhThuong::setgia(int a){
 void KH_BinhThuong::input( phim& p){
     this->setLoaiKH();
     this->setgia();
-    cin.ignore();
     Nguoi::input();
     cout << "Nhap Ngay Dat Ve: " << endl;
     ngaydatve.input();

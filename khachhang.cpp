@@ -4,7 +4,7 @@
 using namespace std;
 
 khachhang::khachhang(){
-
+    this->tongtien = 0;
 }
 khachhang::~khachhang(){
 
@@ -19,12 +19,12 @@ void khachhang::setTongtien(int& tien){
     this->tongtien = tien;
 }
 
+int khachhang::getTongtien(){
+    return this->tongtien;
+}
 
 int khachhang::getSoluong(){
     return this->soluong;
-}
-int khachhang::getTongtien(){
-    return this->tongtien;
 }
 // -----------------------------------------------------------------
 
@@ -70,21 +70,21 @@ void khachhang::doc(ifstream& in){
 //             // this->tongtien += this->ve[i].getgiave();
 //         }
 // }
-void khachhang::output(){
-    cout << "- Thong Tin Khach Hang: " << endl;
-    Nguoi::output();
-    cout << "Ngay dat ve: " << endl;
-    ngaydatve.output();
-    cout << "So Luong Ve Khach Da Mua: " <<  this->soluong << endl;
-        cout << "- Thong Tin Chuyen Bay: " << endl;
-        for (int i = 0; i < this->soluong; ++i)
-        {
-            ve[i].output();
-            cout << endl;
-        }
-        cout << "==> Tong Tien = " << this->tongtien;
-        cout << endl;
-}
+// void khachhang::output(){
+//     cout << "- Thong Tin Khach Hang: " << endl;
+//     Nguoi::output();
+//     cout << "Ngay dat ve: " << endl;
+//     ngaydatve.output();
+//     cout << "So Luong Ve Khach Da Mua: " <<  this->soluong << endl;
+//         cout << "- Thong Tin Chuyen Bay: " << endl;
+//         for (int i = 0; i < this->soluong; ++i)
+//         {
+//             ve[i].output();
+//             cout << endl;
+//         }
+//         cout << "==> Tong Tien = " << this->tongtien;
+//         cout << endl;
+// }
 
 
 // int giabth = 60000;

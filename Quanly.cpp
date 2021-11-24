@@ -340,7 +340,6 @@ void QuanLy::SuaPhim(){
     dsp.close();
 }
 void QuanLy::addCustomer(const int& a,phim& p){
-    cout << 1;
     if(a == 1) {
         KH_ThanhVien tv;
         tv.input(p);

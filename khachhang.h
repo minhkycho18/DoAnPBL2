@@ -11,7 +11,7 @@ protected:
     Date ngaydatve;
     vexemphim ve[50];
     int soluong;
-    unsigned int tongtien;
+    int tongtien;
 public:
     khachhang();
     ~khachhang();

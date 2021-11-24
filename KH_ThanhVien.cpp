@@ -12,6 +12,7 @@ void KH_ThanhVien::setLoaiKH(string s){
 void KH_ThanhVien::setgia(int a){
     this->gia = a;
 }
+
 // void KH_ThanhVien::TinhTien(){
 //     int giatienbth = 75000;
 //     for(int i=0; i< this->soluong; i++){
@@ -22,7 +23,6 @@ void KH_ThanhVien::setgia(int a){
 void KH_ThanhVien::input( phim& p){
     this->setLoaiKH();
     this->setgia();
-    cin.ignore();
     Nguoi::input();
     cout << "Nhap Ngay Dat Ve: " << endl;
     ngaydatve.input();

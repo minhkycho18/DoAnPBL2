@@ -44,7 +44,6 @@ void vexemphim::ghi(ofstream& o){
 // -----------------------------------------------------------------
 
 void vexemphim::input(phim& p){
-    cin.ignore();
     this->tenphim = p;
     cout << "Nhap so ghe" ; fflush(stdin); getline(cin,this->SoGhe);
 }

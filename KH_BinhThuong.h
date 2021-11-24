@@ -7,6 +7,7 @@ class KH_BinhThuong : public khachhang
     private:
         string LoaiKH ;
         int gia;
+        
     public:
         KH_BinhThuong();
         ~KH_BinhThuong();
