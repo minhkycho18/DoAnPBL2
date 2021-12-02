@@ -32,6 +32,8 @@ public:
     void output();
     //-----------------Các phương thức đọc và ghi file---------
     void doc(ifstream&);
+    void docKH(ifstream&);
     void ghi(ofstream&);
+    void ghiKH(ofstream&);
 };
 #endif

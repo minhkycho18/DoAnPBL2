@@ -21,6 +21,7 @@
 void Menu(){
     QuanLy ql;
     ql.Cap_Nhat_Du_Lieu();
+    system("pause");
     int luachon;    
         while (true)
 	{
@@ -63,6 +64,11 @@ void Menu(){
                 if(luachonQL == 4){
                     system("cls");
                     ql.DisplayMovie();
+                    system("pause");
+                }
+                if(luachonQL == 6){
+                    system("cls");
+                    ql.DisplayCustomer();
                     system("pause");
                 }
                 else{

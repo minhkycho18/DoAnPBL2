@@ -17,7 +17,6 @@ QuanLy::~QuanLy()
     delete[] this->ds_khbt;
 }
 void QuanLy::DisplayMovie(){  
-    // 1
     cout << "------------------Danh Sach Phim-------------------------\n";
     for (int i=0;i< m; i++){
         cout << i << "." << endl;
@@ -28,14 +27,40 @@ void QuanLy::DisplayMovie(){
     // }
 }
 void QuanLy::Cap_Nhat_Du_Lieu(){
-    ifstream tsp,dsp;
+    ifstream tsp,dsp,dskh,tskh;
+    int ts;
     tsp.open("tongsophim.txt",ios::in);
     dsp.open("dsphim.txt",ios::in);
-    tsp >> this->m;
-    this->ds_phim = new phim[this->m];
-    for(int i=0; i < this->m; i++){
-        (this->ds_phim + i)->doc(dsp);      // Hàm để cập nhật dữ liệu từ file trước khi chạy chương trinh
+    dskh.open("dskhachhang.txt",ios::in);
+    tskh.open("tongsophim.txt",ios::in);
+    // tsp >> this->m;
+    // this->ds_phim = new phim[this->m];
+    //     for(int i=0; i < this->m; i++)
+    // {
+    //     (this->ds_phim + i)->doc(dsp);      // Hàm để cập nhật dữ liệu từ file trước khi chạy chương trinh
+    // }
+    tskh >> this->p;
+    tskh >> this->n;
+    this->ds_khtv = new KH_ThanhVien[this->p];
+    this->ds_khbt = new KH_BinhThuong[this->n];
+    for(int i=0; i< this->p + this->n ;i++){
+        int demTV,demBT;
+        string temp;
+        getline(dskh,temp);
+        if(temp == "thanhvien"){
+            demTV++;
+            (this->ds_khtv+demTV)->doc(dskh);
+        } 
+        // else 
+        // if(temp == "binhthuong"){
+        //     demBT++;
+        //     (this->ds_khbt+demBT)->doc(dskh);
+        // }
     }
+    tsp.close();
+    dsp.close();
+    dskh.close();
+    tskh.close();
 }
 void QuanLy::ThemPhim(){
     int chon;
@@ -357,20 +382,16 @@ void QuanLy::addCustomer(const int& a,phim& p){
             }
             *(this->ds_khtv+this->p) = tv;
             delete[] temp;
-            ofstream dskh,tskh;
-            dskh.open("dskhachhang.txt",ios::out);
-            tskh.open("tongsoKH.txt",ios::out);
-            tskh << this->n + this->p;
         }
             this->p++;
             ofstream dskh,tskh;
             dskh.open("dskhachhang.txt",ios::app);
             tskh.open("tongsoKH.txt",ios::out);
-            tskh << this->p + this->n;
+            tskh << this->p << endl;
+            tskh << this->n << endl;
             (this->ds_khtv + this->p -1)->ghi(dskh);
             dskh.close();
             tskh.close();
-
     } else {
         KH_BinhThuong bt;
         bt.input(p);
@@ -393,17 +414,30 @@ void QuanLy::addCustomer(const int& a,phim& p){
             ofstream dskh,tskh;
             dskh.open("dskhachhang.txt",ios::app);
             tskh.open("tongsoKH.txt",ios::out);
-            tskh << this->p + this->n;
+            tskh << this->p << endl;
+            tskh << this->n << endl;
             (this->ds_khbt + this->n -1)->ghi(dskh);
             dskh.close();
             tskh.close();
+    }        
+}
+void QuanLy::DisplayCustomer(){
+    cout << "------------------Danh Sach Khach Hang-------------------------\n";
+    for (int i=0;i< this->p; i++){
+        cout << i << "." << endl;
+        (this->ds_khtv + i)->output();
+        cout << endl;
     }
-
-        
-        
+    for (int i=0;i< this->n; i++){
+        cout << i << "." << endl;
+        (this->ds_khbt + i)->output();
+        cout << endl;
+    }
+    cout << "----------------------------------------------------------------\n";
 }
 void QuanLy::Datve(){
     int chon;
+    char tt;
     while (true)
 	{
 		system("cls");

@@ -14,6 +14,7 @@ class KH_ThanhVien : public khachhang
     // Overide
     // void TinhTien();
     void input(phim&);
+    void output();
     void ghi(ofstream&);
 };
 #endif

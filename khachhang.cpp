@@ -31,16 +31,17 @@ int khachhang::getSoluong(){
 
 void khachhang::doc(ifstream& in){
     int sl,tongt;
-    fflush(stdin); 
-    this->ngaydatve.doc(in);
+    // fflush(stdin); 
     Nguoi::doc(in);
+    this->ngaydatve.doc(in);
+    cout << 1;
     in >> sl;
+    // char ss[5];
+	// in.getline( ss, 3 ); 
     for(int i=0;i<sl ; i++){
         this->ve[i].doc(in);
     }
     in >> tongt;
-    char ss[5];
-	in.getline( ss, 3 ); 
     this->setsoluong(sl);
     this->setTongtien(tongt);
 }

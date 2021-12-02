@@ -26,18 +26,18 @@ int vexemphim::getgiave(){
 void vexemphim::doc(ifstream& in){
     string sg;
     int gia;
-    fflush(stdin);
+    // fflush(stdin);
     getline(in,sg);
     in >> gia;
-    this->tenphim.doc(in);
-    char ss[5];
-	in.getline( ss, 3 ); 
+    // char ss[5];
+	// in.getline( ss, 3 ); 
+    this->tenphim.docKH(in);
     this->setSoghe(sg);
     this->setgiave(gia);
 }
 void vexemphim::ghi(ofstream& o){
     o << getSoghe() << endl;
-    this->tenphim.ghi(o);
+    this->tenphim.ghiKH(o);
     o << getgiave() << endl;
 }
 

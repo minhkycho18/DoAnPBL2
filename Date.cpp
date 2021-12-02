@@ -29,13 +29,14 @@ int Date::getyear(){
 }
 // -----------------------------------------------------------------
 void Date::doc(ifstream& in){
+    cout << 1;
     int d,m,y;
-	fflush(stdin);
+	// fflush(stdin);
 	in >> d;
     in >> m;
     in >> y;
-    char ss[5];
-	in.getline( ss, 3 ); 
+    // char ss[5];
+	// in.getline( ss, 3 ); 
 	this->setday(d);
 	this->setday(m);
     this->setday(y);

@@ -1,17 +1,39 @@
 thanhvien
-minh
+Minh
 18
-24
-11
-2021
 1
-36
+1
+1
+1
+10
 nguoi nhen
 hanh dong
 120
+55000
+55000
+thanhvien
+khoa
+18
+2
+2
+2
+1
+20
+nguoi nhen
+hanh dong
+120
+55000
+55000
+binhthuong
+Quang
+1
+1
 3
-14:00
-15:00
-16:00
-55000
-55000
+3
+1
+30
+nguoi nhen
+hanh dong
+120
+75000
+75000

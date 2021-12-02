@@ -20,6 +20,7 @@ public:
     void DisplayMovie();
     //----------------------------KhachHang--------------------------------
     void Datve();
+    void DisplayCustomer();
     void addCustomer(const int&, phim&);
 
 };

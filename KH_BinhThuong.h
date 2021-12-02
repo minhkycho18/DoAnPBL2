@@ -16,6 +16,7 @@ class KH_BinhThuong : public khachhang
     // Overide
         // void TinhTien();
         void input( phim&);
+        void output();
         void ghi(ofstream&);
 };
 #endif

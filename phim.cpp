@@ -65,6 +65,19 @@ void phim::doc(ifstream& in){
 	this->setThoiLuongPhim(thoiluong);
     this->setSLSuat(sl);
 }
+void phim::docKH(ifstream& in){
+    string ht,tl;
+    int thoiluong;
+    // fflush(stdin);
+    getline(in, ht);
+	getline(in, tl);
+	in >> thoiluong;
+    // char ss[5];
+	// in.getline( ss, 3 ); 
+    this->setTenPhim(ht);
+	this->setTheLoai(tl);
+	this->setThoiLuongPhim(thoiluong);
+}
 void phim::ghi(ofstream& o){
     o << getTenPhim() << endl;
     o << getTheLoai() << endl;
@@ -74,6 +87,11 @@ void phim::ghi(ofstream& o){
     {
         (this->dssc + i)->ghi(o);
     }
+}
+void phim::ghiKH(ofstream& o){
+    o << getTenPhim() << endl;
+    o << getTheLoai() << endl;
+    o << getThoiLuongPhim() << endl;
 }
 
 // -----------------------------------------------------------------
