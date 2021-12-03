@@ -1,39 +1,13 @@
 thanhvien
 Minh
 18
-1
-1
-1
-1
-10
-nguoi nhen
-hanh dong
-120
-55000
-55000
-thanhvien
-khoa
-18
-2
-2
-2
-1
-20
-nguoi nhen
-hanh dong
-120
-55000
-55000
-binhthuong
-Quang
-1
-1
 3
-3
+12
+2021
 1
-30
+45
 nguoi nhen
 hanh dong
 120
-75000
-75000
+55000
+55000

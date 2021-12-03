@@ -39,15 +39,15 @@ void KH_ThanhVien::input( phim& p){
 
 void KH_ThanhVien::output(){
     cout << "- Thong Tin Khach Hang: " << endl;
-    cout << "Loai Khach Hang: " << this->LoaiKH << endl;
+    cout << "Loai Khach Hang: " << "Khach Hang Thanh Vien" << endl;
     Nguoi::output();
     cout << "Ngay dat ve: " << endl;
-    ngaydatve.output();
+    this->ngaydatve.output();
     cout << "So Luong Ve Khach Da Mua: " <<  this->soluong << endl;
         cout << "- Thong Tin Chuyen Bay: " << endl;
         for (int i = 0; i < this->soluong; ++i)
         {
-            ve[i].output();
+            this->ve[i].output();
             cout << endl;
         }
         cout << "==> Tong Tien = " << this->tongtien;

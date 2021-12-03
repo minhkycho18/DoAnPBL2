@@ -33,23 +33,24 @@ void QuanLy::Cap_Nhat_Du_Lieu(){
     dsp.open("dsphim.txt",ios::in);
     dskh.open("dskhachhang.txt",ios::in);
     tskh.open("tongsophim.txt",ios::in);
-    // tsp >> this->m;
-    // this->ds_phim = new phim[this->m];
-    //     for(int i=0; i < this->m; i++)
-    // {
-    //     (this->ds_phim + i)->doc(dsp);      // Hàm để cập nhật dữ liệu từ file trước khi chạy chương trinh
-    // }
+    tsp >> this->m;
+    this->ds_phim = new phim[this->m];
+        for(int i=0; i < this->m; i++)
+    {
+        (this->ds_phim + i)->doc(dsp);      // Hàm để cập nhật dữ liệu từ file trước khi chạy chương trinh
+    }
     tskh >> this->p;
     tskh >> this->n;
     this->ds_khtv = new KH_ThanhVien[this->p];
     this->ds_khbt = new KH_BinhThuong[this->n];
     for(int i=0; i< this->p + this->n ;i++){
-        int demTV,demBT;
+        int demTV=0,demBT=0;
         string temp;
         getline(dskh,temp);
         if(temp == "thanhvien"){
-            demTV++;
             (this->ds_khtv+demTV)->doc(dskh);
+            (this->ds_khtv+demTV)->output();
+            demTV++;
         } 
         // else 
         // if(temp == "binhthuong"){

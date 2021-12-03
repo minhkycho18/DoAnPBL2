@@ -28,10 +28,10 @@ void vexemphim::doc(ifstream& in){
     int gia;
     // fflush(stdin);
     getline(in,sg);
+    this->tenphim.docKH(in);
     in >> gia;
     // char ss[5];
 	// in.getline( ss, 3 ); 
-    this->tenphim.docKH(in);
     this->setSoghe(sg);
     this->setgiave(gia);
 }

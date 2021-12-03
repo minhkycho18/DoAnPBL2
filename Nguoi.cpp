@@ -28,14 +28,13 @@ int Nguoi::getTuoi(){
 void Nguoi::doc(ifstream& in){
     string ht;
     int t;
-    cout << this->tuoi;
     // fflush(stdin);
     getline(in,ht);
     in >> t;
     // char ss[5];
-	// in.getline( ss, 3 ); 
-    // this->setHoten(ht);
-    // this->setTuoi(t);
+	// in.getline( ss, 3 );
+    this->setHoten(ht);
+    this->setTuoi(t);
 }
 void Nguoi::ghi(ofstream& o){
     o << getHoten() << endl;
