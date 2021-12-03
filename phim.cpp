@@ -115,10 +115,12 @@ void phim::output(){
     cout << "Ten Phim: " << this->tenphim << endl;
     cout << "The Loai: " << this->theloai << endl;
     cout << "Thoi Luong phim: " << this->thoiluongphim << endl;
-    cout << "Suat Chieu : " << this->SLSuat << endl;
-    for (int  i = 0; i < this->SLSuat; i++)
-    {
-        (this->dssc + i)->output();
+    if(this->SLSuat != 0 ){
+        cout << "Suat Chieu : " << this->SLSuat << endl;
+        for (int  i = 0; i < this->SLSuat; i++)
+        {
+            (this->dssc + i)->output();
+        }
     }
     
 }

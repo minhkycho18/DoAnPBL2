@@ -49,14 +49,13 @@ void QuanLy::Cap_Nhat_Du_Lieu(){
         getline(dskh,temp);
         if(temp == "thanhvien"){
             (this->ds_khtv+demTV)->doc(dskh);
-            (this->ds_khtv+demTV)->output();
             demTV++;
         } 
-        // else 
-        // if(temp == "binhthuong"){
-        //     demBT++;
-        //     (this->ds_khbt+demBT)->doc(dskh);
-        // }
+        else 
+        if(temp == "binhthuong"){
+            (this->ds_khbt+demBT)->doc(dskh);
+            demBT++;
+        }
     }
     tsp.close();
     dsp.close();
@@ -457,5 +456,11 @@ void QuanLy::Datve(){
 		cout << "\nNhap lua chon: ";
 		cin >> select;
         this->addCustomer(select,*(this->ds_phim+chon));
+        system("cls");
+        cout << "Ban Co Muon Tiep Tuc Khong (c/k) ?";
+        cin >> tt;
+        if(tt == 'k' || tt =='K'){
+            break;
+        }
     }
 }

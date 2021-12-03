@@ -90,6 +90,8 @@ void Menu(){
                 cin >> luachonNV;
                 if(luachonNV == 1){
                     ql.Datve();
+                } else {
+                    break;
                 }
             }
             
