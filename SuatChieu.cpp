@@ -37,7 +37,7 @@ void SuatChieu::ShowAisleMap(){
     char avail= 'O';
     char unavail = 'X';
     cout << "\t";
-    for(int i=1 ; i < this->col ; i++){
+    for(int i=1 ; i <= this->col ; i++){
         if(i==3 || i==10){
             cout << setw(9) << i;
         } else {
@@ -47,7 +47,7 @@ void SuatChieu::ShowAisleMap(){
     cout << "\n\n";
     for(int i=1 ;i <= this-> row; i++){
         char temp = 'A';
-        temp = temp+i;
+        temp = temp+i-1;
         cout << temp << "\t";
         for(int j=1;j<= this->col;j++){
             if(j==3 || j==10){
