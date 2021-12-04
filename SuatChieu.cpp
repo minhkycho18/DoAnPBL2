@@ -31,7 +31,13 @@ void SuatChieu::output(){
     cout << getTime() << ", "; 
 }
 bool SuatChieu::checkAisle(int& r, int& c){
-    return 0;
+    int pos = r*10 +c;
+    for(int i=0 ; i< this->col*this->row;i++){
+        if(pos == this->ListSelected[i]){
+            return true;
+        } 
+    }
+    return false;
 }
 void SuatChieu::ShowAisleMap(){
     char avail= 'O';
@@ -50,10 +56,18 @@ void SuatChieu::ShowAisleMap(){
         temp = temp+i-1;
         cout << temp << "\t";
         for(int j=1;j<= this->col;j++){
-            if(j==3 || j==10){
-                cout << setw(9)<<  avail;
+            if(checkAisle(i,j)){
+                if(j==3 || j==10){
+                    cout << setw(9)<<  unavail;
+                } else {
+                    cout << setw(5) << unavail;        
+                }
             } else {
-                cout << setw(5) << avail;        
+                if(j==3 || j==10){
+                    cout << setw(9)<<  avail;
+                } else {
+                    cout << setw(5) << avail;        
+                }
             }
         }
         cout << "\n\n";
