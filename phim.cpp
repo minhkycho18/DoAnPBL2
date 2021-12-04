@@ -64,6 +64,7 @@ void phim::doc(ifstream& in){
 	this->setTheLoai(tl);
 	this->setThoiLuongPhim(thoiluong);
     this->setSLSuat(sl);
+    // cout << this->tenphim << "," << this->theloai << ", " << this->thoiluongphim << "," << this->SLSuat << endl;
 }
 void phim::docKH(ifstream& in){
     string ht,tl;
@@ -123,4 +124,13 @@ void phim::output(){
         }
     }
     
+}
+void phim::Showtimes()
+{
+    for (int  i = 0; i < this->SLSuat; i++)
+        {   
+            cout << i << ". ";
+            (this->dssc + i)->output();
+            cout << endl;
+        }
 }

@@ -12,10 +12,13 @@ protected:
     phim tenphim;
     string SoGhe;
     int giatien;
+    string showtime;
 public:
     vexemphim();
     ~vexemphim();
     // ----------------Cụm hàm get set------------------------
+    void setShowtime(string&);
+    string getShowtime();
     void setSoghe(string&);
     void setgiave( int&);
     string getSoghe();

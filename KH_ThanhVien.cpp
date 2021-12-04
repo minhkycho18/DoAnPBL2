@@ -27,7 +27,6 @@ void KH_ThanhVien::input( phim& p){
     cout << "Nhap Ngay Dat Ve: " << endl;
     ngaydatve.input();
     cout << "Nhap So Luong Ve Khach Mua: "; cin >> this->soluong;
-        //ve = new Vemaybay[this->soluong];
     ve[this->soluong];
     for (int i = 0; i < this->soluong; ++i)
         {

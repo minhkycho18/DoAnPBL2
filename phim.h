@@ -30,6 +30,7 @@ public:
     //-----------------Nhập và suất----------------------------
     void input();
     void output();
+    void Showtimes();
     //-----------------Các phương thức đọc và ghi file---------
     void doc(ifstream&);
     void docKH(ifstream&);

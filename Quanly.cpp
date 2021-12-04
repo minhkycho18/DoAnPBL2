@@ -28,19 +28,23 @@ void QuanLy::DisplayMovie(){
 }
 void QuanLy::Cap_Nhat_Du_Lieu(){
     ifstream tsp,dsp,dskh,tskh;
-    int ts;
     tsp.open("tongsophim.txt",ios::in);
     dsp.open("dsphim.txt",ios::in);
     dskh.open("dskhachhang.txt",ios::in);
-    tskh.open("tongsophim.txt",ios::in);
+    tskh.open("tongsoKH.txt",ios::in);
     tsp >> this->m;
     this->ds_phim = new phim[this->m];
         for(int i=0; i < this->m; i++)
     {
         (this->ds_phim + i)->doc(dsp);      // Hàm để cập nhật dữ liệu từ file trước khi chạy chương trinh
     }
+    tsp.close();
+    dsp.close();
     tskh >> this->p;
+    char ss[5];
+	tskh.getline( ss, 3 ); 
     tskh >> this->n;
+    cout << this->p << "," << this->n;
     this->ds_khtv = new KH_ThanhVien[this->p];
     this->ds_khbt = new KH_BinhThuong[this->n];
     for(int i=0; i< this->p + this->n ;i++){
@@ -56,9 +60,9 @@ void QuanLy::Cap_Nhat_Du_Lieu(){
             (this->ds_khbt+demBT)->doc(dskh);
             demBT++;
         }
+        char ss[5];
+	    dskh.getline( ss, 3 ); 
     }
-    tsp.close();
-    dsp.close();
     dskh.close();
     tskh.close();
 }
@@ -461,6 +465,6 @@ void QuanLy::Datve(){
         cin >> tt;
         if(tt == 'k' || tt =='K'){
             break;
-        }
+        } 
     }
 }

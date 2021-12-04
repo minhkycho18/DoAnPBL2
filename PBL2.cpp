@@ -21,7 +21,7 @@
 void Menu(){
     QuanLy ql;
     ql.Cap_Nhat_Du_Lieu();
-    system("pause");
+    // system("pause");
     int luachon;    
         while (true)
 	{
