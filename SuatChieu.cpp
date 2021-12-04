@@ -1,6 +1,8 @@
 #include "SuatChieu.h"
+
 SuatChieu::SuatChieu()
 {
+    this->ListSelected[96];
 }
 
 SuatChieu::~SuatChieu()
@@ -27,4 +29,33 @@ void SuatChieu::input(){
 }
 void SuatChieu::output(){
     cout << getTime() << ", "; 
+}
+bool SuatChieu::checkAisle(int& r, int& c){
+    return 0;
+}
+void SuatChieu::ShowAisleMap(){
+    char avail= 'O';
+    char unavail = 'X';
+    cout << "\t";
+    for(int i=1 ; i < this->col ; i++){
+        if(i==3 || i==10){
+            cout << setw(9) << i;
+        } else {
+            cout<< setw(5) << i;
+        }       
+    }
+    cout << "\n\n";
+    for(int i=1 ;i <= this-> row; i++){
+        char temp = 'A';
+        temp = temp+i;
+        cout << temp << "\t";
+        for(int j=1;j<= this->col;j++){
+            if(j==3 || j==10){
+                cout << setw(9)<<  avail;
+            } else {
+                cout << setw(5) << avail;        
+            }
+        }
+        cout << "\n\n";
+    }
 }
