@@ -43,7 +43,6 @@ void KH_BinhThuong::output(){
     cout << "Ngay dat ve: " << endl;
     ngaydatve.output();
     cout << "So Luong Ve Khach Da Mua: " <<  this->soluong << endl;
-        cout << "- Thong Tin Chuyen Bay: " << endl;
         for (int i = 0; i < this->soluong; ++i)
         {
             ve[i].output();

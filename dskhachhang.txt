@@ -1,29 +1,40 @@
 thanhvien
 Minh
-18
-10
-10
+19
+4
+12
 2021
-2
+1
+17:30
+20
+Avenger : EndGame (2019)
+Hanh Dong,Khoa Hoc Vien Tuong
+182
+55000
+55000
+thanhvien
+Minh
+20
+1
+1
+1
+1
+21:45
 10
-Avenger : EndGame (2019)
-Hanh Dong,Khoa Hoc Vien Tuong
-182
+Spider-Man:No Way Home
+Hanh Dong,Phieu Luu
+148
 55000
-30
-Avenger : EndGame (2019)
-Hanh Dong,Khoa Hoc Vien Tuong
-182
 55000
-110000
 binhthuong
 Quang
 27
-21
-10
+12
+4
 2021
 1
-45
+20:45
+50
 Bo Gia (2021)
 Hai,Chinh Kich Gia Dinh
 128

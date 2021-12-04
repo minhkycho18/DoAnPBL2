@@ -44,11 +44,10 @@ void QuanLy::Cap_Nhat_Du_Lieu(){
     char ss[5];
 	tskh.getline( ss, 3 ); 
     tskh >> this->n;
-    cout << this->p << "," << this->n;
     this->ds_khtv = new KH_ThanhVien[this->p];
     this->ds_khbt = new KH_BinhThuong[this->n];
+    int demTV=0,demBT=0;
     for(int i=0; i< this->p + this->n ;i++){
-        int demTV=0,demBT=0;
         string temp;
         getline(dskh,temp);
         if(temp == "thanhvien"){

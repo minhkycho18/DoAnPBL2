@@ -30,18 +30,21 @@ int vexemphim::getgiave(){
 // -----------------------------------------------------------------
 
 void vexemphim::doc(ifstream& in){
-    string sg;
+    string sg,sc;
     int gia;
     // fflush(stdin);
+    getline(in,sc);
     getline(in,sg);
     this->tenphim.docKH(in);
     in >> gia;
     char ss[5];
-	in.getline( ss, 3 ); 
+	in.getline( ss, 3 );
+    this->setShowtime(sc); 
     this->setSoghe(sg);
     this->setgiave(gia);
 }
 void vexemphim::ghi(ofstream& o){
+    o << getShowtime() << endl;
     o << getSoghe() << endl;
     this->tenphim.ghiKH(o);
     o << getgiave() << endl;
@@ -52,7 +55,8 @@ void vexemphim::ghi(ofstream& o){
 void vexemphim::input(phim& p){
     int time;
     this->tenphim = p;
-    cout << "========"<< this->tenphim.getTenPhim() << "=======" << endl;
+    cout << "Chon Suat Chieu:\n";
+    cout << "==============="<< this->tenphim.getTenPhim() << "===============" << endl;
     this->tenphim.Showtimes();
     cout << "==========================================================\n";
     cout << "Nhap Lua Chon " << "(<" << this->tenphim.getSLSuat()-1 <<"): " ;
@@ -61,10 +65,11 @@ void vexemphim::input(phim& p){
         cout << "Vui Long Nhap Lai: ";
         cin >> time;
     }
-
-    cout << "Nhap so ghe" ; fflush(stdin); getline(cin,this->SoGhe);
+    this->showtime = (this->tenphim.dssc+time)->getTime();
+    cout << "Nhap so ghe: " ; fflush(stdin); getline(cin,this->SoGhe);
 }
 void vexemphim::output(){
+    cout << "Suat Chieu: " << this->showtime << endl;
     cout << "So ghe: " << this->SoGhe << endl;
     this->tenphim.output();
     cout << "GiaVe: " << this->giatien << endl;

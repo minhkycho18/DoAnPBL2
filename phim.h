@@ -13,8 +13,8 @@ private:
     string theloai;
     int thoiluongphim;
     int SLSuat;
-    SuatChieu *dssc;
 public:
+    SuatChieu *dssc;
     phim();
     ~phim();
     phim(const phim& ); // hàm copy
