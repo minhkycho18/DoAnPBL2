@@ -3,6 +3,7 @@
 SuatChieu::SuatChieu()
 {
     this->ListSelected[96];
+    this->count = 0;
 }
 
 SuatChieu::~SuatChieu()
@@ -16,12 +17,26 @@ string SuatChieu::getTime(){
 }
 void SuatChieu::doc(ifstream& in){
     string t;
+    int dem;
+    int temp;
 	getline(in, t);
+    in >> dem;
+    for(int i=0;i<dem;i++){
+        char ss[5];
+	    in.getline( ss, 3 ); 
+        in>>temp;
+        this->addAisle(temp);
+    }
+    char ss[5];
+	in.getline( ss, 3 ); 
     this->setTime(t);	
 }
 void SuatChieu::ghi(ofstream& o){
     o << getTime() << endl;
-    
+    o << this->count << endl;
+    for(int i=0; i<this->count;i++){
+        o << this->ListSelected[i] << endl;
+    }
 }
 void SuatChieu::input(){
     
@@ -44,7 +59,7 @@ void SuatChieu::ShowAisleMap(){
     char unavail = 'X';
     cout << "\t";
     for(int i=1 ; i <= this->col ; i++){
-        if(i==3 || i==10){
+        if(i==2 || i==8){
             cout << setw(9) << i;
         } else {
             cout<< setw(5) << i;
@@ -57,13 +72,13 @@ void SuatChieu::ShowAisleMap(){
         cout << temp << "\t";
         for(int j=1;j<= this->col;j++){
             if(checkAisle(i,j)){
-                if(j==3 || j==10){
+                if(j==2 || j==8){
                     cout << setw(9)<<  unavail;
                 } else {
                     cout << setw(5) << unavail;        
                 }
             } else {
-                if(j==3 || j==10){
+                if(j==2 || j==8){
                     cout << setw(9)<<  avail;
                 } else {
                     cout << setw(5) << avail;        
@@ -72,4 +87,8 @@ void SuatChieu::ShowAisleMap(){
         }
         cout << "\n\n";
     }
+}
+void SuatChieu::addAisle(int& a){
+    this->ListSelected[count] = a;
+    this->count++;
 }

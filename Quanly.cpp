@@ -459,6 +459,9 @@ void QuanLy::Datve(){
 		cout << "\nNhap lua chon: ";
 		cin >> select;
         this->addCustomer(select,*(this->ds_phim+chon));
+        ofstream dsp;
+        dsp.open("dsphim.txt",ios::out);
+        (this->ds_phim + chon)->ghi(dsp);
         system("cls");
         cout << "Ban Co Muon Tiep Tuc Khong (c/k) ?";
         cin >> tt;

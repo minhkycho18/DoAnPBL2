@@ -29,7 +29,6 @@ public:
     //-----------------Các phương thức đọc và ghi file---------
     void doc(ifstream&);
     void ghi(ofstream&);
-    
 };
 #endif
 

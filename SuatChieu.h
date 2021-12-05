@@ -9,10 +9,12 @@ class SuatChieu
 {
     private:
         string time;
-        const int row = 8;
-        const int col = 12;
-        int ListSelected[96];
+        const int row = 9;
+        const int col = 9;
+        int ListSelected[81];
+        int count;
     public:
+        void addAisle(int&);
         bool checkAisle(int&, int&);
         void ShowAisleMap();
         SuatChieu();

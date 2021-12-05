@@ -66,7 +66,20 @@ void vexemphim::input(phim& p){
         cin >> time;
     }
     this->showtime = (this->tenphim.dssc+time)->getTime();
-    cout << "Nhap so ghe: " ; fflush(stdin); getline(cin,this->SoGhe);
+    (this->tenphim.dssc+time)->ShowAisleMap();
+    cout << "\n Vui Long Nhap Theo Cu Phap:\n";
+    cout << "\n Vi Du: Ghe so 9, Day C : C9";
+    cout << "\nNhap so ghe: " ; fflush(stdin); getline(cin,this->SoGhe);
+    bool test = (int)this->SoGhe[0] <65 || (int)this->SoGhe[0] > 74;
+    while(test == true  && this->SoGhe.length()!=2){
+        cout << "Khong Hop Le,Vui Long Nhap Lai:";
+        getline(cin,this->SoGhe);
+    }
+    //-----convert string to int
+    int numb1 = (int)(this->SoGhe[0])-64;
+    int numb2 = (int)(this->SoGhe[1]-'0');
+    int temp = numb1*10 + numb2;
+    (this->tenphim.dssc+time)->addAisle(temp);
 }
 void vexemphim::output(){
     cout << "Suat Chieu: " << this->showtime << endl;
