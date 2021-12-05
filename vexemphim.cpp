@@ -54,6 +54,8 @@ void vexemphim::ghi(ofstream& o){
 
 void vexemphim::input(phim& p){
     int time;
+    int numb1,numb2,temp;
+    int dem=0;
     this->tenphim = p;
     cout << "Chon Suat Chieu:\n";
     cout << "==============="<< this->tenphim.getTenPhim() << "===============" << endl;
@@ -71,14 +73,20 @@ void vexemphim::input(phim& p){
     cout << "\n Vi Du: Ghe so 9, Day C : C9";
     cout << "\nNhap so ghe: " ; fflush(stdin); getline(cin,this->SoGhe);
     bool test = (int)this->SoGhe[0] <65 || (int)this->SoGhe[0] > 74;
-    while(test == true  && this->SoGhe.length()!=2){
+    numb1 = (int)(this->SoGhe[0])-64;
+    numb2 = (int)(this->SoGhe[1]-'0');
+    while(test == 1  || this->SoGhe.length()!=2 || (this->tenphim.dssc+time)->checkAisle(numb1,numb2) == true ){
+        if((this->tenphim.dssc+time)->checkAisle(numb1,numb2) == true)
+        cout << "So Ghe nay da ton tai,Vui Long Nhap Lai:";
+        else 
         cout << "Khong Hop Le,Vui Long Nhap Lai:";
         getline(cin,this->SoGhe);
+        numb1 = (int)(this->SoGhe[0])-64;
+        numb2 = (int)(this->SoGhe[1]-'0');
+        test = (int)this->SoGhe[0] <65 || (int)this->SoGhe[0] > 74;
     }
     //-----convert string to int
-    int numb1 = (int)(this->SoGhe[0])-64;
-    int numb2 = (int)(this->SoGhe[1]-'0');
-    int temp = numb1*10 + numb2;
+    temp = numb1*10 + numb2;
     (this->tenphim.dssc+time)->addAisle(temp);
 }
 void vexemphim::output(){

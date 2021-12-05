@@ -29,6 +29,7 @@ Hai,Chinh Kich Gia Dinh
 19:00
 0
 20:45
+0
 Spider-Man:No Way Home
 Hanh Dong,Phieu Luu
 148
@@ -46,3 +47,24 @@ Hanh Dong,Phieu Luu
 21:45
 0
 23:15
+0
+Shang-Chi and The Legend of the Ten Rings
+Hanh Dong,Ky ao
+138
+6
+9:45
+4
+54
+55
+62
+63
+11:30
+0
+13:45
+0
+15:30
+0
+17:30
+0
+19:45
+0

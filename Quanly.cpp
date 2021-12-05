@@ -461,7 +461,10 @@ void QuanLy::Datve(){
         this->addCustomer(select,*(this->ds_phim+chon));
         ofstream dsp;
         dsp.open("dsphim.txt",ios::out);
-        (this->ds_phim + chon)->ghi(dsp);
+        for(int i=0; i < this->m; i++)
+        {
+         (this->ds_phim + i)->ghi(dsp);      // Hàm để cập nhật dữ liệu từ file trước khi chạy chương trinh
+        }
         system("cls");
         cout << "Ban Co Muon Tiep Tuc Khong (c/k) ?";
         cin >> tt;
