@@ -473,3 +473,25 @@ void QuanLy::Datve(){
         } 
     }
 }
+void QuanLy::DisplayRevenue(){
+    cout << "\n\n\t\t ============= Doanh Thu ============\n";
+        int a[12] ;
+        for(int i=1;i <= 12;i++){
+            a[i]=0;
+            for(int j=0;j<this->p;j++){
+                if(this->ds_khtv->getDate().getmonth() == i){
+                    a[i] += this->ds_khtv->getTongtien();
+                } 
+            }
+            for(int j=0;j<this->n;j++){
+                if(this->ds_khtv->getDate().getmonth() == i){
+                    a[i] += this->ds_khtv->getTongtien();
+                } 
+            }
+        }
+        for(int i=1;i<=12;i++){
+            cout << "Doanh Thu Thang " << i << ": " << a[i];
+            cout << endl;
+        }
+    system("pause");
+}

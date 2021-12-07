@@ -19,7 +19,8 @@ Hai,Chinh Kich Gia Dinh
 128
 6
 8:00
-0
+1
+15
 10:15
 0
 13:30
@@ -67,4 +68,22 @@ Hanh Dong,Ky ao
 17:30
 0
 19:45
+0
+Eternal - Chung Toc Bat Tu
+Phieu Luu, Hanh Dong
+157
+7
+8:00
+0
+11:00
+0
+14:15
+0
+17:30
+0
+19:50
+0
+22:30
+0
+24:00
 0

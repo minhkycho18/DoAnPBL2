@@ -22,6 +22,6 @@ public:
     void Datve();
     void DisplayCustomer();
     void addCustomer(const int&, phim&);
-
+    void DisplayRevenue();
 };
 

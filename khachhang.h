@@ -20,6 +20,7 @@ public:
     void setTongtien(int&);  
     int getSoluong();
     int getTongtien();
+    Date getDate();
     //-----------------Nhập và suất----------------------------
     virtual void input(phim&) = 0;
     virtual void output() = 0;

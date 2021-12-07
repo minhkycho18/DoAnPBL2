@@ -26,6 +26,9 @@ int khachhang::getTongtien(){
 int khachhang::getSoluong(){
     return this->soluong;
 }
+Date khachhang::getDate(){
+    return this->ngaydatve;
+}
 // -----------------------------------------------------------------
 
 
