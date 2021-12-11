@@ -447,30 +447,40 @@ void QuanLy::Datve(){
         this->DisplayMovie();
 		cout << "\n======Vui Long Chon Phim:==============";
 		cout << endl;
+        cout << "\nNhap " << this->m << " de quay tro lai giao dien dat ve: ";
 		cout << "\nNhap lua chon: ";
 		cin >> chon;
-        system("cls");
-        int select;
-        cout << "\n===== Ban Co The Thanh Vien Khong ?=====";
-        cout << "\n1.Co";
-        cout << "\n2.Khong";
-        cout << "\n0.Ket Thuc";
-        cout << endl;
-		cout << "\nNhap lua chon: ";
-		cin >> select;
-        this->addCustomer(select,*(this->ds_phim+chon));
-        ofstream dsp;
-        dsp.open("dsphim.txt",ios::out);
-        for(int i=0; i < this->m; i++)
+        if(chon < this->m) {
+            system("cls");
+            int select;
+            cout << "\n===== Ban Co The Thanh Vien Khong ?=====";
+            cout << "\n1.Co";
+            cout << "\n2.Khong";
+            cout << "\n0.Ket Thuc";
+            cout << endl;
+            cout << "\nNhap lua chon: ";
+            cin >> select;
+            if(select == 1 || select == 2) {
+                this->addCustomer(select,*(this->ds_phim+chon));
+                ofstream dsp;
+                dsp.open("dsphim.txt",ios::out);
+                for(int i=0; i < this->m; i++)
+                {
+                (this->ds_phim + i)->ghi(dsp);      // Hàm để cập nhật dữ liệu từ file trước khi chạy chương trinh
+                }
+                system("cls");
+                cout << "Ban Co Muon Tiep Tuc Khong (c/k) ?";
+                cin >> tt;
+                if(tt == 'k' || tt =='K'){
+                    break;
+                } 
+            } else {
+                break;
+            }
+        } else 
         {
-         (this->ds_phim + i)->ghi(dsp);      // Hàm để cập nhật dữ liệu từ file trước khi chạy chương trinh
+         break;   
         }
-        system("cls");
-        cout << "Ban Co Muon Tiep Tuc Khong (c/k) ?";
-        cin >> tt;
-        if(tt == 'k' || tt =='K'){
-            break;
-        } 
     }
 }
 void QuanLy::DisplayRevenue(){
@@ -479,13 +489,13 @@ void QuanLy::DisplayRevenue(){
         for(int i=1;i <= 12;i++){
             a[i]=0;
             for(int j=0;j<this->p;j++){
-                if(this->ds_khtv->getDate().getmonth() == i){
-                    a[i] += this->ds_khtv->getTongtien();
+                if((this->ds_khtv+j)->getDate().getmonth() == i){
+                    a[i] += (this->ds_khtv+j)->getTongtien();
                 } 
             }
             for(int j=0;j<this->n;j++){
-                if(this->ds_khtv->getDate().getmonth() == i){
-                    a[i] += this->ds_khtv->getTongtien();
+                if((this->ds_khbt+j)->getDate().getmonth() == i){
+                    a[i] += (this->ds_khbt+j)->getTongtien();
                 } 
             }
         }

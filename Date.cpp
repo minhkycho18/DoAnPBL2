@@ -47,8 +47,16 @@ void Date::ghi(ofstream& o){
 void Date::input(){
     cout << "Nhap Ngay: ";
     cin >> this->day;
+    while(this->day >31 || this->day <=0){
+        cout << "Vui Long Nhap Lai:";
+        cin >> this->day;
+    }
     cout << "Nhap Thang: ";
     cin >> this->month;
+    while(this->month >12 || this->month <=0){
+        cout << "Vui Long Nhap Lai:";
+        cin >> this->month;
+    }
     cout << "Nhap Nam: ";
     cin >> this->year;
 }
