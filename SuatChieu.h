@@ -4,6 +4,7 @@
 #include <fstream>
 #include <iomanip>
 #include <string>
+#include <Windows.h>
 using namespace std;
 class SuatChieu
 {
@@ -25,6 +26,7 @@ class SuatChieu
         void ghi(ofstream&);
         void input();
         void output();
+        friend void SET_COLOR(int);
 };
 
 

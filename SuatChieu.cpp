@@ -1,5 +1,4 @@
 #include "SuatChieu.h"
-
 SuatChieu::SuatChieu()
 {
     this->ListSelected[96];
@@ -8,6 +7,19 @@ SuatChieu::SuatChieu()
 
 SuatChieu::~SuatChieu()
 {
+}
+void SET_COLOR(int color)
+{
+	WORD wColor;
+     
+
+     HANDLE hStdOut = GetStdHandle(STD_OUTPUT_HANDLE);
+     CONSOLE_SCREEN_BUFFER_INFO csbi;
+     if(GetConsoleScreenBufferInfo(hStdOut, &csbi))
+     {
+          wColor = (csbi.wAttributes & 0xF0) + (color & 0x0F);
+          SetConsoleTextAttribute(hStdOut, wColor);
+     }
 }
 void SuatChieu::setTime(string& s){
     this->time = s;
@@ -72,12 +84,14 @@ void SuatChieu::ShowAisleMap(){
         cout << temp << "\t";
         for(int j=1;j<= this->col;j++){
             if(checkAisle(i,j)){
+                SET_COLOR(4);
                 if(j==2 || j==8){
                     cout << setw(9)<<  unavail;
                 } else {
                     cout << setw(5) << unavail;        
                 }
             } else {
+                SET_COLOR(2);
                 if(j==2 || j==8){
                     cout << setw(9)<<  avail;
                 } else {
@@ -86,6 +100,7 @@ void SuatChieu::ShowAisleMap(){
             }
         }
         cout << "\n\n";
+        SET_COLOR(7);
     }
 }
 void SuatChieu::addAisle(int& a){
