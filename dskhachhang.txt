@@ -1,9 +1,6 @@
 thanhvien
 Minh
 19
-5
-12
-2021
 2
 9:45
 E4
@@ -21,9 +18,6 @@ Hanh Dong,Ky ao
 binhthuong
 Quang
 27
-5
-12
-2021
 2
 9:45
 F2
@@ -41,9 +35,6 @@ Hanh Dong,Ky ao
 thanhvien
 NVA
 20
-30
-8
-2021
 1
 8:00
 A5
@@ -52,3 +43,178 @@ Hai,Chinh Kich Gia Dinh
 128
 55000
 55000
+thanhvien
+Tran Cong Nguyen Hai
+20
+1
+19:50
+F4
+Eternal - Chung Toc Bat Tu
+Phieu Luu, Hanh Dong
+157
+55000
+55000
+thanhvien
+Duong Thi Dieu Linh
+20
+1
+19:50
+F5
+Eternal - Chung Toc Bat Tu
+Phieu Luu, Hanh Dong
+157
+55000
+55000
+binhthuong
+Nguyen Van A
+17
+1
+19:50
+F6
+Eternal - Chung Toc Bat Tu
+Phieu Luu, Hanh Dong
+157
+75000
+75000
+binhthuong
+Tran Van A
+24
+2
+19:45
+C3
+Shang-Chi and The Legend of the Ten Rings
+Hanh Dong,Ky ao
+138
+75000
+19:45
+C4
+Shang-Chi and The Legend of the Ten Rings
+Hanh Dong,Ky ao
+138
+75000
+150000
+binhthuong
+Tran Van B
+21
+2
+19:10
+E4
+Spider-Man:No Way Home
+Hanh Dong,Phieu Luu
+148
+75000
+19:10
+E5
+Spider-Man:No Way Home
+Hanh Dong,Phieu Luu
+148
+75000
+150000
+binhthuong
+Nguyen Van C
+22
+2
+19:45
+C5
+Shang-Chi and The Legend of the Ten Rings
+Hanh Dong,Ky ao
+138
+75000
+19:45
+C6
+Shang-Chi and The Legend of the Ten Rings
+Hanh Dong,Ky ao
+138
+75000
+150000
+thanhvien
+Tran Van C
+20
+5
+19:10
+D2
+Spider-Man:No Way Home
+Hanh Dong,Phieu Luu
+148
+55000
+19:10
+D3
+Spider-Man:No Way Home
+Hanh Dong,Phieu Luu
+148
+55000
+19:10
+D4
+Spider-Man:No Way Home
+Hanh Dong,Phieu Luu
+148
+55000
+19:10
+D5
+Spider-Man:No Way Home
+Hanh Dong,Phieu Luu
+148
+55000
+19:10
+D6
+Spider-Man:No Way Home
+Hanh Dong,Phieu Luu
+148
+55000
+275000
+binhthuong
+Tran Van D
+25
+1
+19:45
+F5
+Shang-Chi and The Legend of the Ten Rings
+Hanh Dong,Ky ao
+138
+75000
+75000
+binhthuong
+Nguyen Van D
+22
+3
+19:10
+F4
+Spider-Man:No Way Home
+Hanh Dong,Phieu Luu
+148
+75000
+19:10
+F5
+Spider-Man:No Way Home
+Hanh Dong,Phieu Luu
+148
+75000
+19:10
+F6
+Spider-Man:No Way Home
+Hanh Dong,Phieu Luu
+148
+75000
+225000
+thanhvien
+NVD
+18
+1
+8:00
+C4
+Bo Gia (2021)
+Hai,Chinh Kich Gia Dinh
+128
+55000
+55000
+binhthuong
+Minh
+18
+1
+9:45
+D4
+Shang-Chi and The Legend of the Ten Rings
+Hanh Dong,Ky ao
+138
+75000
+75000

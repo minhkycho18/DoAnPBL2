@@ -1,14 +1,12 @@
 #ifndef kh_h
 #define kh_h
 #include "vexemphim.h"
-#include "Date.h"
 #include "Nguoi.h"
 #include <fstream>
 using namespace std;
 class khachhang : public Nguoi
 {
 protected:
-    Date ngaydatve;
     vexemphim ve[50];
     int soluong;
     int tongtien;
@@ -20,7 +18,6 @@ public:
     void setTongtien(int&);  
     int getSoluong();
     int getTongtien();
-    Date getDate();
     //-----------------Nhập và suất----------------------------
     virtual void input(phim&) = 0;
     virtual void output() = 0;

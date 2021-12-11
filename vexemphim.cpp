@@ -92,7 +92,7 @@ void vexemphim::input(phim& p){
 void vexemphim::output(){
     cout << "Suat Chieu: " << this->showtime << endl;
     cout << "So ghe: " << this->SoGhe << endl;
-    this->tenphim.output();
+    this->tenphim.outputKH();
     cout << "GiaVe: " << this->giatien << endl;
 }
 

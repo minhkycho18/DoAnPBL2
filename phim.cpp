@@ -125,6 +125,11 @@ void phim::output(){
     }
     
 }
+void phim::outputKH(){
+    cout << "Ten Phim: " << this->tenphim << endl;
+    cout << "The Loai: " << this->theloai << endl;
+    cout << "Thoi Luong phim: " << this->thoiluongphim << endl;
+}
 void phim::Showtimes()
 {
     for (int  i = 0; i < this->SLSuat; i++)

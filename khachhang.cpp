@@ -26,9 +26,6 @@ int khachhang::getTongtien(){
 int khachhang::getSoluong(){
     return this->soluong;
 }
-Date khachhang::getDate(){
-    return this->ngaydatve;
-}
 // -----------------------------------------------------------------
 
 
@@ -36,7 +33,6 @@ void khachhang::doc(ifstream& in){
     int sl,tongt;
     fflush(stdin); 
     Nguoi::doc(in);
-    this->ngaydatve.doc(in);
     in >> sl;
     char ss[5];
 	in.getline( ss, 3 ); 

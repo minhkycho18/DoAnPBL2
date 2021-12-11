@@ -469,6 +469,11 @@ void QuanLy::Datve(){
                 (this->ds_phim + i)->ghi(dsp);      // Hàm để cập nhật dữ liệu từ file trước khi chạy chương trinh
                 }
                 system("cls");
+                if(select == 1){
+                    (this->ds_khtv + this->p-1)->output();
+                } else {
+                    (this->ds_khbt + this->n-1)->output();
+                }
                 cout << "Ban Co Muon Tiep Tuc Khong (c/k) ?";
                 cin >> tt;
                 if(tt == 'k' || tt =='K'){
@@ -484,24 +489,19 @@ void QuanLy::Datve(){
     }
 }
 void QuanLy::DisplayRevenue(){
-    cout << "\n\n\t\t ============= Doanh Thu ============\n";
-        int a[12] ;
-        for(int i=1;i <= 12;i++){
-            a[i]=0;
-            for(int j=0;j<this->p;j++){
-                if((this->ds_khtv+j)->getDate().getmonth() == i){
-                    a[i] += (this->ds_khtv+j)->getTongtien();
-                } 
-            }
-            for(int j=0;j<this->n;j++){
-                if((this->ds_khbt+j)->getDate().getmonth() == i){
-                    a[i] += (this->ds_khbt+j)->getTongtien();
-                } 
-            }
-        }
-        for(int i=1;i<=12;i++){
-            cout << "Doanh Thu Thang " << i << ": " << a[i];
-            cout << endl;
-        }
+    system("cls");
+    int sum1=0,sum2=0;
+    cout << "\n\n\t\t ============= Doanh Thu Trong Ngay ============\n";
+    cout << "Doanh Thu Khach Hang Thanh Vien: ";
+    for(int i=0;i<this->p;i++){
+        sum1 += (this->ds_khtv+i)->getTongtien();
+    }
+    cout << sum1;
+    cout <<"\nDoanh Thu Khach Hang Binh Thuong: ";
+    for(int i=0;i<this->n;i++){
+        sum2 += (this->ds_khbt+i)->getTongtien();
+    }
+    cout << sum2;
+    cout <<"\nDoanh Thu Tong Trong Ngay : " << sum1+sum2 << endl ;
     system("pause");
 }

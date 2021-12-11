@@ -24,8 +24,6 @@ void KH_BinhThuong::input( phim& p){
     this->setLoaiKH();
     this->setgia();
     Nguoi::input();
-    cout << "Nhap Ngay Dat Ve: " << endl;
-    ngaydatve.input();
     cout << "Nhap So Luong Ve Khach Mua: "; cin >> this->soluong;
         //ve = new Vemaybay[this->soluong];
     ve[this->soluong];
@@ -38,10 +36,8 @@ void KH_BinhThuong::input( phim& p){
 }
 void KH_BinhThuong::output(){
     cout << "- Thong Tin Khach Hang: " << endl;
-    cout << "Loai Khach Hang: " << this->LoaiKH << endl;
+    cout << "Loai Khach Hang: " << "Khach Hang Binh Thuong" << endl;
     Nguoi::output();
-    cout << "Ngay dat ve: " << endl;
-    ngaydatve.output();
     cout << "So Luong Ve Khach Da Mua: " <<  this->soluong << endl;
         for (int i = 0; i < this->soluong; ++i)
         {
@@ -54,7 +50,6 @@ void KH_BinhThuong::output(){
 void KH_BinhThuong::ghi(ofstream& o) {
     o << this->LoaiKH << endl;
     Nguoi::ghi(o);
-    this->ngaydatve.ghi(o);
     o << getSoluong() << endl;
     for(int i=0;i< this->soluong ; i++){
         this->ve[i].ghi(o);
