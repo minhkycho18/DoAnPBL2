@@ -1,27 +1,9 @@
 #include "QuanLy.h"
 #include <fstream>
 
-
-// void Xem_DS_phim(phim ds_phim[],int& m){
-//     for (int i=0;i< m; i++){
-//         cout << i << "." << endl;
-//         ds_phim[i].output();
-//         cout << endl;
-//     }
-// }
-// void Cap_Nhat_Du_Lieu(phim ds_phim[], int& m){
-//     ifstream tsp,dsp;
-//     tsp.open("tongsophim.txt",ios::in);
-//     dsp.open("dsphim.txt",ios::in);
-//     tsp >> m;
-//     for(int i=0; i < m; i++){
-//         ds_phim[i].doc(dsp);        // Hàm để cập nhật dữ liệu từ file trước khi chạy chương trinh
-//     }
-// }
 void Menu(){
     QuanLy ql;
     ql.Cap_Nhat_Du_Lieu();
-    // system("pause");
     int luachon;    
         while (true)
 	{

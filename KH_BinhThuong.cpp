@@ -13,19 +13,11 @@ void KH_BinhThuong::setLoaiKH(string s){
 void KH_BinhThuong::setgia(int a){
     this->gia = a;
 }
-// void KH_BinhThuong::TinhTien(){
-//     int giatienbth = 75000;
-//     for(int i=0; i< this->soluong; i++){
-//         ve[i].setgiave(giatienbth);
-//         this->tongtien += this->ve[i].getgiave();
-//     }
-// }
 void KH_BinhThuong::input( phim& p){
     this->setLoaiKH();
     this->setgia();
     Nguoi::input();
     cout << "Nhap So Luong Ve Khach Mua: "; cin >> this->soluong;
-        //ve = new Vemaybay[this->soluong];
     ve[this->soluong];
     for (int i = 0; i < this->soluong; ++i)
         {

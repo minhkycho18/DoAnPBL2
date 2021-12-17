@@ -24,8 +24,6 @@ public:
     //-----------------Các phương thức đọc và ghi file---------
     void doc(ifstream&) ;
     virtual void ghi(ofstream&) = 0;
-    // virtual void TinhTien() = 0 ;
-    // void Datve();
 };
 #endif
 

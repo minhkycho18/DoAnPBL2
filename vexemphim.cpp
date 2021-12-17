@@ -32,7 +32,6 @@ int vexemphim::getgiave(){
 void vexemphim::doc(ifstream& in){
     string sg,sc;
     int gia;
-    // fflush(stdin);
     getline(in,sc);
     getline(in,sg);
     this->tenphim.docKH(in);

@@ -176,7 +176,6 @@ void QuanLy::ThemPhim(){
         tsp.open("tongsophim.txt",ios::out);
         for(int i=0 ; i < this->m; i++){
             (this->ds_phim+i)->ghi(dsp);
-            cout << 1;
         }
         tsp << this->m;
         dsp.close();
@@ -219,7 +218,6 @@ void QuanLy::XoaPhim()
             this->ds_phim = new phim[this->m -1];
             for(int i=0; i<this->m-1;i++)
                 *(this->ds_phim + i) = *(temp + i+1);
-        // *(this->ds_phim) = p;
         delete[] temp;
         }
         this->m--;
@@ -251,7 +249,6 @@ void QuanLy::XoaPhim()
             this->ds_phim = new phim[this->m-1];
             for(int i=0; i<this->m-1; i++)
                 *(this->ds_phim + i) = *(temp + i);
-        // *(this->ds_phim) = p;
         delete[] temp;
         }
         this->m--;
@@ -309,6 +306,7 @@ void QuanLy::XoaPhim()
     }
 }
 void QuanLy::SuaPhim(){  
+    system("cls");
     int chon;
     while (true)
 	{

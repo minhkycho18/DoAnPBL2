@@ -12,14 +12,6 @@ void KH_ThanhVien::setLoaiKH(string s){
 void KH_ThanhVien::setgia(int a){
     this->gia = a;
 }
-
-// void KH_ThanhVien::TinhTien(){
-//     int giatienbth = 75000;
-//     for(int i=0; i< this->soluong; i++){
-//         ve[i].setgiave(giatienbth);
-//         this->tongtien += this->ve[i].getgiave();
-//     }
-// }
 void KH_ThanhVien::input( phim& p){
     this->setLoaiKH();
     this->setgia();

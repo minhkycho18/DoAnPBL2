@@ -64,17 +64,13 @@ void phim::doc(ifstream& in){
 	this->setTheLoai(tl);
 	this->setThoiLuongPhim(thoiluong);
     this->setSLSuat(sl);
-    // cout << this->tenphim << "," << this->theloai << ", " << this->thoiluongphim << "," << this->SLSuat << endl;
 }
 void phim::docKH(ifstream& in){
     string ht,tl;
     int thoiluong;
-    // fflush(stdin);
     getline(in, ht);
 	getline(in, tl);
 	in >> thoiluong;
-    // char ss[5];
-	// in.getline( ss, 3 ); 
     this->setTenPhim(ht);
 	this->setTheLoai(tl);
 	this->setThoiLuongPhim(thoiluong);

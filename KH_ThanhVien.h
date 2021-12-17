@@ -12,7 +12,6 @@ class KH_ThanhVien : public khachhang
         void setLoaiKH(string = "thanhvien");
         void setgia(int =55000);
     // Overide
-    // void TinhTien();
     void input(phim&);
     void output();
     void ghi(ofstream&);
